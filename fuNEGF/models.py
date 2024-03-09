@@ -160,7 +160,7 @@ class LinearChain:
         #     k = self.k_fun(E)
             G_R = self.G_R_fun(k, E)
             G_A = np.conj(G_R.T)
-            T = np.trace( self.Gamma_1_fun_k(k) @ G_R @ self.Gamma_2_fun_k(k) @ G_A )
+            T = np.real(np.trace( self.Gamma_1_fun_k(k) @ G_R @ self.Gamma_2_fun_k(k) @ G_A ))
             T_states.append(T)
             E_to_plot.append(E)
         if ax is None: fig, ax = plt.subplots(figsize=(2.5, 3))
