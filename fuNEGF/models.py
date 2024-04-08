@@ -136,25 +136,6 @@ class LinearChain:
         self.eigvals, self.eigvecs = np.linalg.eigh(self.H)
         self.eigvals_ordered = list(self.eigvals[::2]) + list(self.eigvals[-1::-2])
 
-        # --- TRY TO IMPLEMENT:
-        # determine the k-values exactly from the states themselves
-        # ks_diagonalized = []
-        # for i in range(N):
-        #     # determine the k of the corresponding eigenvector, which should be a plane wave, where the phase is k
-        #     eigvec = eigvecs[:, i]
-        #     c_n_half = eigvec[5]
-        #     c_n_half_plus_1 = eigvec[6]
-        #     # get the phase of the plane wave
-        #     k = np.angle(c_n_half_plus_1 / c_n_half) / a
-        #     ks_diagonalized.append(k)
-        # print(H)
-        # print(type(eigvecs))
-        # print(eigvecs[0, :])        # eigvec0 = eigvecs[:, 0]
-        # print(eigvec0)
-        # print(eigvecs)
-        # print(np.divide(H@eigvec0, eigvec0))  # check the eigenvalue
-        # print(eigvals)
-
         # plot the analytic energy dispersion
         fig, axes = plt.subplots(1, 2, figsize=[6.5, 3.5])
         plt.suptitle(f"t = {self.t}, eps_0 = {self.eps_0}")
@@ -172,7 +153,7 @@ class LinearChain:
             "o",
             label="diagonalized H",
             markerfacecolor="none",
-            markersize=5, 
+            markersize=5,
         )
         axes[0].set_ylabel(r"$E$ (eV)", fontsize=12)
         axes[0].set_xlabel(r"$k \cdot a$ (rad)", fontsize=12)

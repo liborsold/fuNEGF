@@ -1,4 +1,7 @@
-from models import LinearChain
+# import the LinearChain class from the models module within the fuNEGF package in the parallel directory
+# print the directories in path
+
+from fuNEGF.models import LinearChain
 from random import random
 import numpy as np
 
