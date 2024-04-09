@@ -8,6 +8,6 @@ Non Equillibrium Green's Functions solvers and examples for educational purposes
 
 ## Features
 * object-oriented
-* thoroughly documented
+* thoroughly [documented](https://funegf.readthedocs.io/en/latest/)
 * PEP8-compliant
-* with unit tests
+* including unit tests
