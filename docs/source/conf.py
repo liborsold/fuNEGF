@@ -3,23 +3,35 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+
+# INCLUDE package in path
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../src/'))
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'fuNEGF'
-copyright = '2024, Libor Vojacek'
-author = 'Libor Vojacek'
-release = '0.1'
+copyright = '2024, Libor Vojáček'
+author = 'Libor Vojáček'
+release = '0.1.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.napoleon']
+extensions = [ 
+    'sphinx.ext.duration', 
+    'sphinx.ext.doctest', 
+    'sphinx.ext.autodoc', 
+    'sphinx.ext.autosummary', 
+    'sphinx.ext.napoleon', 
+] 
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-language = 'y'
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

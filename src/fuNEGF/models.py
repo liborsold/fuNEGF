@@ -1,6 +1,8 @@
+"""Contains the physical model classes for the NEGF solver.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 class LinearChain:
     """Linear chain tight-binding model with NEGF solver.
