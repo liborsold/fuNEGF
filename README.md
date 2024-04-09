@@ -1,4 +1,6 @@
 # fuNEGF
+```pip install fuNEGF```
+
 Non-Equillibrium Green's Functions solvers and examples for educational purposes. Limited to a 1D linear chain for now.
 See the [online documentation](https://funegf.readthedocs.io/en/latest/).
 
