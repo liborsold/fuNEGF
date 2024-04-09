@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Classes &#8212; fuNEGF 0.1.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=a58bc63e"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="classes">
+<h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fuNEGF.models.</span></span><span class="sig-name descname"><span class="pre">LinearChain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Linear chain tight-binding model with NEGF solver.
+Include arbitrary on-site potential impurities.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.G_R_fun">
+<span class="sig-name descname"><span class="pre">G_R_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sigma_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.G_R_fun" title="Link to this definition">¶</a></dt>
+<dd><p>The retarded Green’s function for a given k and energy E.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
+<li><p><strong>Sigma_0</strong> (<em>N-by-N numpy array</em><em>, </em><em>optional</em>) – The internal self-energy. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the retarded Green’s function in matrix form.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>N-by-N numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Greens_functions_solver">
+<span class="sig-name descname"><span class="pre">Greens_functions_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.Greens_functions_solver" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Self-consistent iterative NEGF solver in case where the phase and momentum relaxation</dt><dd><p>are defined in terms of the Green’s functions themselves (see Datta’s Lessons from Nanoelectronics B).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
+<li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
+<li><p><strong>D0_phase</strong> (<em>float</em>) – The phase relaxation parameter.</p></li>
+<li><p><strong>D0_phase_momentum</strong> (<em>float</em>) – The phase+momentum relaxation parameter.</p></li>
+<li><p><strong>N_sc</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of self-consistent iteration steps: typically a value around 50 should be enough. Defaults to 70.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>the self-consistently solved Green’s functions (retarded, advanced, electron occupation), the internal self-energy Sigma_0,</dt><dd><p>and the in-scattering self-energy Sigma_in_0.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>N-by-N numpy arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.add_H_impurity">
+<span class="sig-name descname"><span class="pre">add_H_impurity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.add_H_impurity" title="Link to this definition">¶</a></dt>
+<dd><p>Add an impurity Hamiltonian.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>H_impurity</strong> (<em>N-by-N numpy array</em>) – The impurity Hamiltonian (typically an Anderson disorder).</p></li>
+<li><p><strong>plot_dispersion</strong> (<em>bool</em><em>, </em><em>optional</em>) – Plot the numerical and analytical dispersion. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical">
+<span class="sig-name descname"><span class="pre">compare_dispersion_analytic_vs_numerical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical" title="Link to this definition">¶</a></dt>
+<dd><p>Plots a comparison of the analytical and numerical dispersion.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.construct_H">
+<span class="sig-name descname"><span class="pre">construct_H</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_H_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.construct_H" title="Link to this definition">¶</a></dt>
+<dd><p>Construct the linear chain tight-binding Hamiltonian.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>make_H_periodic</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.</p></li>
+<li><p><strong>print_H_matrix</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, prints the Hamiltonian matrix. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_occupation">
+<span class="sig-name descname"><span class="pre">plot_occupation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E_to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_occupation" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Plot the occupation f(j) of the sites j in the chain, which in the case f1=1, f2=0 corresponds to the</dt><dd><p>electrochemical potential mu(j) = qV f(j), where a potential V is imagined to be applied across the
+device and q is the electron charge.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>D0_phase</strong> (<em>float</em>) – The phase relaxation parameter.</p></li>
+<li><p><strong>D0_phase_momentum</strong> (<em>float</em>) – The phase+momentum relaxation parameter.</p></li>
+<li><p><strong>N_sc</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of self-consistent iteration steps: typically a value around 50 should be enough. Defaults to 70.
+N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
+<li><p><strong>E_to_plot</strong> (<em>int</em><em>, </em><em>optional</em>) – The energy at which to plot the occupation. Defaults to 0.</p></li>
+<li><p><strong>show</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the plot will be shown. Defaults to True.</p></li>
+<li><p><strong>ax</strong> (<em>_type_</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_onsite_energy">
+<span class="sig-name descname"><span class="pre">plot_onsite_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_onsite_energy" title="Link to this definition">¶</a></dt>
+<dd><p>Plot the on-site energy as horizontal lines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_transmission">
+<span class="sig-name descname"><span class="pre">plot_transmission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_transmission" title="Link to this definition">¶</a></dt>
+<dd><p>Plots the transmission function T(E) given by T = Tr[Gamma_1 G_R Gamma_2 G_A].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">fuNEGF</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Libor Vojáček.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/classes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
