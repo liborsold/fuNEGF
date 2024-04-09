@@ -8,5 +8,5 @@ Non Equillibrium Green's Functions solvers and examples for educational purposes
 * includes unit tests
 
 ## Structure
-* the LinearChain class including the NEGF routines resides in ```models.py```
-* a Jupyter notebook in *examples* folder
+* the ```LinearChain``` class including the NEGF routines resides in ```models.py```
+* a Jupyter notebook in ```examples``` folder
