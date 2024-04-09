@@ -3,7 +3,7 @@
 Non-Equillibrium Green's Functions solvers and examples for educational purposes. Limited to a 1D linear chain for now.
 See the [online documentation](https://funegf.readthedocs.io/en/latest/).
 
-```pip install fuNEGF```
+**```pip install fuNEGF```**
 
 ## Structure
 * the ```LinearChain``` class including the NEGF routines resides in ```models.py```
