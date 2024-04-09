@@ -1,5 +1,5 @@
 Non-Equillibrium Green's Functions solvers and examples for educational purposes. Limited to a 1D linear chain for now.
-See the [online documentation](https://funegf.readthedocs.io/en/latest/).
+See the [documentation](https://funegf.readthedocs.io/en/latest/).
 
 Install with **```pip install fuNEGF```**.
 
@@ -11,7 +11,7 @@ Install with **```pip install fuNEGF```**.
 ## Example
 A linear chain with a single or multiple on-site potential impurities will present a chemical potential (occupation) drop, which may not be apparent unless a phase relaxation is included, as shown below.
 An additional momentum relaxation will cause a non-zero chemical potential slope in between the impurity regions.
-The complete description and calculation are provided in the ```one-dimensional_channel.ipynb``` notebook.
+The complete description and calculation are provided in the ```src/examples/one-dimensional_channel.ipynb``` notebook.
 
 ![example](./example.png)
 
