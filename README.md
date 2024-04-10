@@ -1,5 +1,5 @@
 Non-Equillibrium Green's Functions solvers and examples for educational purposes. Limited to a 1D linear chain for now.
-See the [documentation](https://funegf.readthedocs.io/en/latest/).
+See the [documentation](https://liborsold.github.io/fuNEGF/).
 
 Install with **```pip install fuNEGF```** from the [project's PyPI repository](https://pypi.org/project/fuNEGF/).
 
@@ -17,6 +17,6 @@ The complete description and calculation are provided in the ```src/examples/one
 
 ## Features
 * object-oriented
-* with automatically generated [online documentation](https://funegf.readthedocs.io/en/latest/)
+* with automatically generated [online documentation](https://liborsold.github.io/fuNEGF/)
 * PEP8-compliant
 * including unit tests
