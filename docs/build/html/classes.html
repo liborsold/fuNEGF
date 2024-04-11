@@ -38,6 +38,248 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Linear chain tight-binding model with NEGF solver.
 Include arbitrary on-site potential impurities.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.N">
+<span class="sig-name descname"><span class="pre">N</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.N" title="Link to this definition">¶</a></dt>
+<dd><p>Number of sites in the chain.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.eps_0">
+<span class="sig-name descname"><span class="pre">eps_0</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.eps_0" title="Link to this definition">¶</a></dt>
+<dd><p>On-site energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.t">
+<span class="sig-name descname"><span class="pre">t</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.t" title="Link to this definition">¶</a></dt>
+<dd><p>Hopping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.a">
+<span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.a" title="Link to this definition">¶</a></dt>
+<dd><p>Lattice constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.H_impurity">
+<span class="sig-name descname"><span class="pre">H_impurity</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.H_impurity" title="Link to this definition">¶</a></dt>
+<dd><p>Impurity Hamiltonian (typically on-site potential (Anderson) disorder). Defaults to None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.make_H_periodic">
+<span class="sig-name descname"><span class="pre">make_H_periodic</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.make_H_periodic" title="Link to this definition">¶</a></dt>
+<dd><p>If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_dispersion">
+<span class="sig-name descname"><span class="pre">plot_dispersion</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_dispersion" title="Link to this definition">¶</a></dt>
+<dd><p>If True, the dispersion will be plotted after constructing the Hamiltonian. Defaults to True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.H">
+<span class="sig-name descname"><span class="pre">H</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.H" title="Link to this definition">¶</a></dt>
+<dd><p>Hamiltonian matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>N-by-N numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.E_vs_k_fun">
+<span class="sig-name descname"><span class="pre">E_vs_k_fun</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.E_vs_k_fun" title="Link to this definition">¶</a></dt>
+<dd><p>Analytical dispersion E(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.k_vs_E_fun">
+<span class="sig-name descname"><span class="pre">k_vs_E_fun</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.k_vs_E_fun" title="Link to this definition">¶</a></dt>
+<dd><p>Inverse dispersion k(E).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.k_states">
+<span class="sig-name descname"><span class="pre">k_states</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.k_states" title="Link to this definition">¶</a></dt>
+<dd><p>The N allowed values of the k quantum number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.E_levels">
+<span class="sig-name descname"><span class="pre">E_levels</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.E_levels" title="Link to this definition">¶</a></dt>
+<dd><p>The corresponding energy levels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_1_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_1_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_1_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>Self-energy Sigma_1(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_2_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_2_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_2_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>Self-energy Sigma_2(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>Self-energy Sigma(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Gamma_1_fun_k">
+<span class="sig-name descname"><span class="pre">Gamma_1_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Gamma_1_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>Broadening Gamma_1(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Gamma_2_fun_k">
+<span class="sig-name descname"><span class="pre">Gamma_2_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Gamma_2_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>Broadening Gamma_2(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.f_1">
+<span class="sig-name descname"><span class="pre">f_1</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.f_1" title="Link to this definition">¶</a></dt>
+<dd><p>Fermi-Dirac distribution for lead 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.f_2">
+<span class="sig-name descname"><span class="pre">f_2</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.f_2" title="Link to this definition">¶</a></dt>
+<dd><p>Fermi-Dirac distribution for lead 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_in_1_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_in_1_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_in_1_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>In-scattering self-energy Sigma_in_1(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_in_2_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_in_2_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_in_2_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>In-scattering self-energy Sigma_in_2(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Sigma_in_fun_k">
+<span class="sig-name descname"><span class="pre">Sigma_in_fun_k</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.Sigma_in_fun_k" title="Link to this definition">¶</a></dt>
+<dd><p>In-scattering self-energy Sigma_in(k).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.G_R_fun">
 <span class="sig-name descname"><span class="pre">G_R_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sigma_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.G_R_fun" title="Link to this definition">¶</a></dt>
@@ -189,7 +431,6 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
 
 <h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
 </ul>
