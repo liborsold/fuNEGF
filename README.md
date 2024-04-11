@@ -17,6 +17,6 @@ The complete description and calculation are provided in the ```examples/one-dim
 
 ## Features
 * object-oriented
-* with automatically generated [online documentation](https://liborsold.github.io/fuNEGF/)
 * PEP8-compliant
-* including unit tests
+* including unit tests (limited for now)
+* with automatically generated [documentation online](https://liborsold.github.io/fuNEGF/)
