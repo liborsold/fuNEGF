@@ -9,10 +9,10 @@ class LinearChain:
     Include arbitrary on-site potential impurities.
 
     Attributes:
-        N (int): Number of sites in the chain.
-        eps_0 (float): On-site energy.
-        t (float): Hopping.
-        a (float): Lattice constant.
+        N (int): Number of sites in the chain. Defaults to 100. 
+        eps_0 (float): On-site energy. Defaults to 0.
+        t (float): Nearest-neighbor hopping. Defaults to 1.
+        a (float): Lattice constant. Defaults to 1.
         H_impurity (numpy array, optional): Impurity Hamiltonian (typically on-site potential (Anderson) disorder). Defaults to None.
         make_H_periodic (bool, optional): If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.
         plot_dispersion (bool, optional): If True, the dispersion will be plotted after constructing the Hamiltonian. Defaults to True.
@@ -36,10 +36,10 @@ class LinearChain:
 
     def __init__(
         self,
-        N,
-        eps_0,
-        t,
-        a,
+        N=100,
+        eps_0=0,
+        t=1,
+        a=1,
         H_impurity=None,
         make_H_periodic=False,
         plot_dispersion=True,
@@ -47,10 +47,10 @@ class LinearChain:
         """Initialize the parameters for a linear chain model.
 
         Args:
-            N (int): Number of sites in the chain.
-            eps_0 (float): On-site energy.
-            t (float): Hopping.
-            a (float): Lattice constant.
+            N (int): Number of sites in the chain. Defaults to 100.
+            eps_0 (float): On-site energy. Defaults to 0.
+            t (float): Hopping. Defaults to 1.
+            a (float): Lattice constant. Defaults to 1.
             H_impurity (numpy array, optional): Impurity Hamiltonian (typically on-site potential (Anderson) disorder). Defaults to None.
             make_H_periodic (bool, optional): If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.
             plot_dispersion (bool, optional): If True, the dispersion will be plotted after constructing the Hamiltonian. Defaults to True.

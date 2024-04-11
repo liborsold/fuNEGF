@@ -35,14 +35,14 @@
 <p>For now, there is only the LinearChain class, including both the model and NEGF solver routines. This will be in future separated into a generic System class, with child classes of different specific systems (like LinearChain).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fuNEGF.models.</span></span><span class="sig-name descname"><span class="pre">LinearChain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fuNEGF.models.</span></span><span class="sig-name descname"><span class="pre">LinearChain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Linear chain tight-binding model with NEGF solver.
 Include arbitrary on-site potential impurities.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.N">
 <span class="sig-name descname"><span class="pre">N</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.N" title="Link to this definition">¶</a></dt>
-<dd><p>Number of sites in the chain.</p>
+<dd><p>Number of sites in the chain. Defaults to 100.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
@@ -53,7 +53,7 @@ Include arbitrary on-site potential impurities.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.eps_0">
 <span class="sig-name descname"><span class="pre">eps_0</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.eps_0" title="Link to this definition">¶</a></dt>
-<dd><p>On-site energy.</p>
+<dd><p>On-site energy. Defaults to 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -64,7 +64,7 @@ Include arbitrary on-site potential impurities.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.t">
 <span class="sig-name descname"><span class="pre">t</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.t" title="Link to this definition">¶</a></dt>
-<dd><p>Hopping.</p>
+<dd><p>Nearest-neighbor hopping. Defaults to 1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -75,7 +75,7 @@ Include arbitrary on-site potential impurities.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.a">
 <span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#fuNEGF.models.LinearChain.a" title="Link to this definition">¶</a></dt>
-<dd><p>Lattice constant.</p>
+<dd><p>Lattice constant. Defaults to 1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
