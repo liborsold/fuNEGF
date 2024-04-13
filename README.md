@@ -36,7 +36,7 @@ $$
 \mathbf{G}^{\mathrm{R}}=[E \mathbf{I}-\mathbf{H}-\mathbf{\Sigma}]^{-1}
 $$
 
-is a function of energy $E$ multiplied by the identity matrix $\mathbf{I}$, and the $\mathbf{H}$ and self-energy $\mathbf{\Sigma}$ (to be defined by the physical model).
+is a function of energy $E$ multiplied by the identity matrix $\mathbf{I}$, and the Hamiltonian $\mathbf{H}$ and self-energy $\mathbf{\Sigma}$ are to be defined by the physical model.
 
 Along with the *advanced Green's function*
 
