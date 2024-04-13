@@ -70,7 +70,6 @@ Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sig
 $$ \begin{align}
         \mathbf{\Sigma} &= \mathbf{\Sigma}_1 + \mathbf{\Sigma}_2 + \mathbf{\Sigma}_0 , \\
         \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 + \mathbf{\Sigma}^{\mathrm{in}}_0 .
-
    \end{align}        
 $$
 
