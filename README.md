@@ -168,7 +168,7 @@ $$
 0 & 0 & 1 & \cdots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & 1
-\end{array}\right]
+\end{array}\right] ,
 $$
 
 which is used for an element-wise multiplication $\odot$ of the Green's function matrices
