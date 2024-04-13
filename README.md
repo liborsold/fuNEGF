@@ -50,14 +50,14 @@ $$
 which gives the *density matrix* 
 
 $$
-    \hat{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi \,.
+    \hat{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
 $$
 
 
 Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\Sigma^{\mathrm{in}}$ are sums of the left contact and right contact, while the self-energy also contains an intrinsic term
 
 $$ \begin{align}
-        \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 \,, \\
+        \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 , \\
         \mathbf{\Sigma} &= \mathbf{\Sigma}_1 + \mathbf{\Sigma}_2 + \mathbf{\Sigma}_0 
    \end{align}        
 $$
@@ -66,9 +66,9 @@ NOTE: We use the (physically expressive) notation of S. Datta, where the self-en
 
 $$
 \begin{align}
-    \Sigma &\equiv \Sigma^\mathrm{R} \,, \\
-    G^\mathrm{n} &\equiv -i G^< \,, \\
-    \Sigma^\mathrm{in} &\equiv -i \Sigma^< \,.
+    \Sigma &\equiv \Sigma^\mathrm{R} , \\
+    G^\mathrm{n} &\equiv -i G^< , \\
+    \Sigma^\mathrm{in} &\equiv -i \Sigma^< .
 \end{align}
 $$
 
