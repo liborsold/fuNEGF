@@ -126,7 +126,7 @@ $$
 \end{array}\right] ,
 $$
 
-with the broadening functions $\Gamma \equiv i\left[ \Sigma - \Sigma^\dagger\right] $ 
+with the broadening functions $\mathbf{\Gamma} \equiv i\left[ \mathbf{\Sigma} - \mathbf{\Sigma}^\dagger\right] $ 
 
 $$
 \mathbf{\Gamma}_1=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
