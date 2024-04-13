@@ -105,7 +105,7 @@ $$
 \cdots & 0 & t & \varepsilon & \cdots \\
 \ddots & \vdots & \vdots & \vdots & \ddots
 \end{array}
-\right]
+\right] .
 $$
 
 The **self-energies**
@@ -123,7 +123,7 @@ $$
 0 & \cdots & 0 & 0 & 0 \\
 0 & \cdots & 0 & 0 & 0 \\
 0 & \cdots & 0 & 0 & \mathrm{te}^{i k a}
-\end{array}\right]
+\end{array}\right] ,
 $$
 
 with the broadening functions $\Gamma \equiv i\left[ \Sigma - \Sigma^\dagger\right] $ 
@@ -141,7 +141,7 @@ $$
 0 & \cdots & 0 & 0 & 0 \\
 0 & \cdots & 0 & 0 & 0 \\
 0 & \cdots & 0 & 0 & 1
-\end{array}\right]
+\end{array}\right] ,
 $$
 
 where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that $\frac{\hbar v}{a} = -2 t / \sin (k a)$.
