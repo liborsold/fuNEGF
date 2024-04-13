@@ -1,4 +1,4 @@
-Non-Equillibrium Green's Functions solvers and examples for educational purposes. Limited to a 1D linear chain for now.
+Non-Equillibrium Green's Functions (NEGF) solvers and examples for educational purposes. Limited to a 1D linear chain for now.
 See the [documentation](https://liborsold.github.io/fuNEGF/).
 
 Install with 
