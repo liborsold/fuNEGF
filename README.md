@@ -25,21 +25,25 @@ The complete description and calculation are provided in the ```examples/one-dim
 ## NEGF Equations
 
 The *retarded Green's function*
+
 $$
 \mathbf{G}^{\mathrm{R}}=[E \mathbf{I}-\mathbf{H}-\mathbf{\Sigma}]^{-1}
 $$
 
 along with the *advanced Green's function*
+
 $$
     \mathbf{G}^{\mathrm{A}} = \left[ \mathbf{G}^{\mathrm{R}} \right]^\dagger
 $$
 
 provide the *spectral function*
+
 $$
 \mathbf{A}=i\left[\mathbf{G}^{\mathrm{R}}-\mathbf{G}^{\mathrm{A}}\right]
 $$
 
 and are used to solve for the *"electron occupation" Green's function* ($\mathbf{G}^{\mathrm{n}} \equiv -i \mathbf{G}^< $)
+
 $$
 \mathbf{G}^{\mathrm{n}}=\mathbf{G}^{\mathrm{R}} \Sigma^{\mathrm{in}} \mathbf{G}^{\mathrm{A}}
 $$
