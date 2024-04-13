@@ -149,10 +149,10 @@ where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that
 The in-scattering terms
 
 $$
-\mathbf{\Sigma}^\mathrm{in}_i = \mathbf{\Gamma}_i \cdot f_i ,
+\mathbf{\Sigma}^\mathrm{in}_i = \mathbf{\Gamma}_i \cdot f_i(E) ,
 $$
 
- where $f_i$ is the Fermi-Dirac distribution function for contact $i \in \set{1, 2}$.
+ where $f_i(E)$ is the Fermi-Dirac distribution function for contact $i \in \set{1, 2}$.
 
 The self-energies describing the **phase and phase-momentum relaxation** are defined in terms of the Green's functions themself. Their strength is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, creating a "mask" matrix
 
