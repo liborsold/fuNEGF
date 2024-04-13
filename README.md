@@ -20,3 +20,52 @@ The complete description and calculation are provided in the ```examples/one-dim
 * PEP8-compliant
 * including unit tests (limited for now)
 * with automatically generated [documentation online](https://liborsold.github.io/fuNEGF/)
+
+
+## NEGF Equations
+
+The *retarded Green's function*
+$$
+\mathbf{G}^{\mathrm{R}}=[E \mathbf{I}-\mathbf{H}-\mathbf{\Sigma}]^{-1}
+$$
+
+along with the *advanced Green's function*
+$$
+    \mathbf{G}^{\mathrm{A}} = \left[ \mathbf{G}^{\mathrm{R}} \right]^\dagger
+$$
+
+provide the *spectral function*
+$$
+\mathbf{A}=i\left[\mathbf{G}^{\mathrm{R}}-\mathbf{G}^{\mathrm{A}}\right]
+$$
+
+and are used to solve for the *"electron occupation" Green's function* ($\mathbf{G}^{\mathrm{n}} \equiv -i \mathbf{G}^< $)
+$$
+\mathbf{G}^{\mathrm{n}}=\mathbf{G}^{\mathrm{R}} \Sigma^{\mathrm{in}} \mathbf{G}^{\mathrm{A}}
+$$
+
+which gives the *density matrix* 
+
+$$
+    \hat{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi \,.
+$$
+
+
+Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\Sigma^{\mathrm{in}}$ are sums of the left contact and right contact, while the self-energy also contains an intrinsic term
+
+$$ \begin{align}
+        \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 \,, \\
+        \mathbf{\Sigma} &= \mathbf{\Sigma}_1 + \mathbf{\Sigma}_2 + \mathbf{\Sigma}_0 
+   \end{align}        
+$$
+
+NOTE: We use the (physically expressive) notation of S. Datta, where the self-energies and Green's functions in relation to the standard notation (on the right) are defined as  
+
+$$
+\begin{align}
+    \Sigma &\equiv \Sigma^\mathrm{R} \,, \\
+    G^\mathrm{n} &\equiv -i G^< \,, \\
+    \Sigma^\mathrm{in} &\equiv -i \Sigma^< \,.
+\end{align}
+$$
+
