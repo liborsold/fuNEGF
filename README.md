@@ -171,7 +171,7 @@ $$
 \end{array}\right]
 $$
 
-which is used for an element-wise multiplication of the Green's function matrices
+which is used for an element-wise multiplication $\odot$ of the Green's function matrices
 
 $$
 \begin{align}
