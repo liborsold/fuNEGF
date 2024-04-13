@@ -59,7 +59,7 @@ $$
 which gives the *density matrix* 
 
 $$
-    \bm{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
+    \textbf{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
 $$
 
 The in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ is also defined by the physical model.
