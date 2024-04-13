@@ -81,7 +81,7 @@ $$
 
 ### Linear Chain Model
 
-For the ```LinearChain``` model, the Hamiltonian
+For the ```LinearChain``` model, the **Hamiltonian**
 
 $$
 \hat{H}_{ij} = \begin{cases}
@@ -104,7 +104,7 @@ $$
 \right]
 $$
 
-The linear chain **self-energies**
+The **self-energies**
 
 $$
 \Sigma_1=\left[\begin{array}{ccccc}
