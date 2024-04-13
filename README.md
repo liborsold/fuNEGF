@@ -84,7 +84,7 @@ $$
 For the ```LinearChain``` model, the **Hamiltonian**
 
 $$
-\hat{H}_{ij} = \begin{cases}
+H_{ij} = \begin{cases}
             \epsilon_0, & \text { if } i=j \\ 
             t, & \text{ if } i \neq j 
         \end{cases}
@@ -107,13 +107,13 @@ $$
 The **self-energies**
 
 $$
-\Sigma_1=\left[\begin{array}{ccccc}
+\mathbf{\Sigma}_1=\left[\begin{array}{ccccc}
 \mathrm{te}^{i k a} & 0 & 0 & \cdots & 0 \\
 0 & 0 & 0 & \cdots & 0 \\
 0 & 0 & 0 & \cdots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & 0
-\end{array}\right], \quad \Sigma_2=\left[\begin{array}{ccccc}
+\end{array}\right], \quad \mathbf{\Sigma}_2=\left[\begin{array}{ccccc}
 0 & \cdots & 0 & 0 & 0 \\
 \vdots & \ddots & \vdots & \vdots & \vdots \\
 0 & \cdots & 0 & 0 & 0 \\
@@ -125,13 +125,13 @@ $$
 with the broadening functions $\Gamma \equiv i\left[ \Sigma - \Sigma^\dagger\right] $ 
 
 $$
-\Gamma_1=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
+\mathbf{\Gamma}_1=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
 1 & 0 & 0 & \cdots & 0 \\
 0 & 0 & 0 & \cdots & 0 \\
 0 & 0 & 0 & \cdots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & 0
-\end{array}\right], \quad \Gamma_2=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
+\end{array}\right], \quad \mathbf{\Gamma}_2=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
 0 & \cdots & 0 & 0 & 0 \\
 \vdots & \ddots & \vdots & \vdots & \vdots \\
 0 & \cdots & 0 & 0 & 0 \\
