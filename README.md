@@ -4,7 +4,7 @@ See the [documentation](https://liborsold.github.io/fuNEGF/).
 Install with 
 
 **
-``
+```
 pip install fuNEGF
 ```
 ** 
