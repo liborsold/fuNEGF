@@ -90,7 +90,7 @@ $$
         \end{cases}
 $$
 
-Impurity can be added to the on-site energy as 
+Impurity potential $U$ can be added to the on-site energy as 
 
 $$ 
 \hat{H}=\left[
