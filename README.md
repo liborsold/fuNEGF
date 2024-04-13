@@ -152,7 +152,7 @@ $$
 \mathbf{\Sigma}^\mathrm{in}_i = \mathbf{\Gamma}_i \cdot f_i ,
 $$
 
- where $f_i$ is the Fermi-Dirac distribution function for contact $i \in \{ 1, 2 \} $.
+ where $f_i$ is the Fermi-Dirac distribution function for contact $i \in \{1, 2\}$.
 
 The self-energies describing the **phase and phase-momentum relaxation** are defined in terms of the Green's functions themself. The phase and phase-momentum relaxation strength is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, creating a "mask" matrix
 
