@@ -27,6 +27,9 @@ The complete description and calculation are provided in the ```examples/one-dim
 
 
 ## The Theory In A Nutshell
+
+### NEGF
+
 The *retarded Green's function*
 
 $$
@@ -58,7 +61,7 @@ $$
 $$
 
 
-Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\Sigma^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma_1}$ and right contact $\mathbf{\Sigma_2}$, while the self-energy also contains the intrinsic term $\mathbf{\Sigma_0}$, hence
+Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma_1}$, right contact $\mathbf{\Sigma_2}$ and an intrinsic term $\mathbf{\Sigma_0}$, hence
 
 $$ \begin{align}
         \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 , \\
@@ -76,6 +79,7 @@ $$
 \end{align}
 $$
 
+### Linear Chain Model
 
 For the ```LinearChain``` model, the Hamiltonian
 
@@ -86,7 +90,17 @@ $$
         \end{cases}
 $$
 
-and the self-energies
+Impurity can be added to the on-site energy as 
+$$ \hat{H}=\left[\begin{array}{ccccc}
+\ddots & \vdots & \vdots & \vdots & \ddots \\
+\cdots & \varepsilon & t & 0 & \cdots \\
+\cdots & t & \varepsilon+U & t & \cdots \\
+\cdots & 0 & t & \varepsilon & \cdots \\
+\ddots & \vdots & \vdots & \vdots & \ddots
+\end{array}\right]
+$$
+
+The linear chain **self-energies**
 
 $$
 \Sigma_1=\left[\begin{array}{ccccc}
@@ -132,4 +146,38 @@ $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
 
-The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself, therefore an iterative (self-consistent) loop is performed.
+The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself
+
+$$
+        \mathbf{D} = D_0^\text{phase} 
+
+        \left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & 1 & 1 & \cdots & 1 \\
+1 & 1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & 1 & 1 & \cdots & 1
+\end{array}\right]
+
+        + D_0^\text{phase-momentum}
+
+        \left[\begin{array}{ccccc}
+1 & 0 & 0 & \cdots & 0 \\
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1
+\end{array}\right]
+
+$$
+
+and
+
+$$
+\begin{align}
+        \mathbf{\Sigma}_0 &= \mathbf{D} \mathbf{G}^\text{R}, \\
+        \mathbf{\Sigma}^\text{in}_0 &= \mathbf{D} \mathbf{G}^\text{n} ,
+\end{align}
+$$
+
+therefore a self-consistent loop is performed, where $\mathbf{G}^\text{R}$ and $\mathbf{G}^\text{n}$ are initially set as zero matrices and iteratively updated. About 70 iteration steps are usually enough to reach a convergence.
