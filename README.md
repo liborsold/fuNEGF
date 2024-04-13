@@ -22,8 +22,7 @@ The complete description and calculation are provided in the ```examples/one-dim
 * with automatically generated [documentation online](https://liborsold.github.io/fuNEGF/)
 
 
-## NEGF Equations
-
+## The Theory In A Nutshell
 The *retarded Green's function*
 
 $$
