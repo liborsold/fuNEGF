@@ -93,7 +93,7 @@ $$
 Impurity potential $U$ can be added to the on-site energy as 
 
 $$ 
-\hat{H}=\left[
+\mathbf{H}=\left[
     \begin{array}{ccccc}
 \ddots & \vdots & \vdots & \vdots & \ddots \\
 \cdots & \varepsilon & t & 0 & \cdots \\
@@ -145,7 +145,7 @@ where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that
 The in-scattering terms
 
 $$
-\Sigma^\mathrm{in}_i = \Gamma_i \cdot f_i ,
+\mathbf{\Sigma}^\mathrm{in}_i = \mathbf{\Gamma}_i \cdot f_i ,
 $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
