@@ -77,7 +77,10 @@ The self-energies describing the phase and momentum relaxation are defined in te
 For the ```LinearChain``` model, the Hamiltonian
 
 $$
-\hat{H}_{ij} = \begin{cases}\epsilon_0, & \text { if } i=j \\ t, & \text { if } i \neq j \end{cases}
+\hat{H}_{ij} = \begin{cases}
+            \epsilon_0, & \text { if } i=j \\ 
+            t, & \text{ if } i \neq j 
+        \end{cases}
 $$
 
 and the self-energies
