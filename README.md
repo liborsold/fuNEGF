@@ -74,7 +74,13 @@ $$
 
 The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself, therefore an iterative (self-consistent) loop needs to be performed.
 
-For the ```LinearChain``` model, the self-energies
+For the ```LinearChain``` model, the Hamiltonian
+
+$$
+\hat{H}_{ij} = \begin{cases}\epsilon_0, & \text { if } i=j \\ t, & \text { if } i \neq j \end{cases}
+$$
+
+and the self-energies
 
 $$
 \Sigma_1=\left[\begin{array}{ccccc}
