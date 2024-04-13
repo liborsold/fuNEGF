@@ -179,9 +179,9 @@ which is used for an element-wise multiplication $\odot$ of the Green's function
 
 $$
 \begin{align}
-        \mathbf{\Sigma}^\text{in}_0 &= \mathbf{D} \odot \mathbf{G}^\text{n}, \\
-        \mathbf{\Sigma}_0 &= \mathbf{D} \odot \mathbf{G}^\text{R} .
+        \mathbf{\Sigma}_0 &= \mathbf{D} \odot \mathbf{G}^\text{R}, \\
+        \mathbf{\Sigma}^\text{in}_0 &= \mathbf{D} \odot \mathbf{G}^\text{n} .
 \end{align}
 $$
 
-Since the Green's functions enter the definition of the self-energy, a self-consistent loop is performed, where $\mathbf{G}^\text{R}$ and $\mathbf{G}^\text{n}$ are initially set as zero matrices and iteratively updated, along with $\mathbf{\Sigma}^\text{in}_0$ and $\mathbf{\Sigma}_0$. About 70 iteration steps are usually enough to reach a convergence.
+Since the Green's functions enter the definition of the self-energy, a self-consistent loop is performed, where $\mathbf{G}^\text{R}$ and $\mathbf{G}^\text{n}$ are initially set as zero matrices and iteratively updated, along with $\mathbf{\Sigma}_0$ and $\mathbf{\Sigma}^\text{in}_0$. About 70 iteration steps are usually enough to reach a convergence.
