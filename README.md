@@ -132,4 +132,4 @@ $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
 
-The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself, therefore an iterative (self-consistent) loop needs to be performed.
+The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself, therefore an iterative (self-consistent) loop is performed.
