@@ -36,7 +36,9 @@ $$
 \mathbf{G}^{\mathrm{R}}=[E \mathbf{I}-\mathbf{H}-\mathbf{\Sigma}]^{-1}
 $$
 
-along with the *advanced Green's function*
+is a function of energy $E$ multiplied by the identity matrix $\mathbf{I}$, and the $\mathbf{H}$ and self-energy $\mathbf{\Sigma}$ (to be defined by the physical model).
+
+Along with the *advanced Green's function*
 
 $$
     \mathbf{G}^{\mathrm{A}} = \left[ \mathbf{G}^{\mathrm{R}} \right]^\dagger
@@ -57,14 +59,14 @@ $$
 which gives the *density matrix* 
 
 $$
-    \hat{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
+    \mathbf{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
 $$
 
 
 Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma_1}$, right contact $\mathbf{\Sigma_2}$ and an intrinsic term $\mathbf{\Sigma_0}$, hence
 
 $$ \begin{align}
-        \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 , \\
+        \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 + \mathbf{\Sigma}^{\mathrm{in}}_0 , \\
         \mathbf{\Sigma} &= \mathbf{\Sigma}_1 + \mathbf{\Sigma}_2 + \mathbf{\Sigma}_0 .
    \end{align}        
 $$
