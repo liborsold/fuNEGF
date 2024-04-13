@@ -146,7 +146,7 @@ $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
 
-The self-energies describing the phase and momentum relaxation are defined in terms of the *Green's function itself*. The relaxation strength is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, defining a "mask"
+The self-energies describing the phase and momentum relaxation are defined in terms of the *Green's function itself*. The relaxation strength is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, defining a "mask" matrix
 
 $$
         \mathbf{D} = D_0^\text{phase} 
@@ -167,13 +167,13 @@ $$
 \end{array}\right]
 $$
 
-and performing an element-wise matrix multiplication
+used for an element-wise multiplication with the Green's function matrices
 
 $$
 \begin{align}
         \mathbf{\Sigma}_0 &= \mathbf{D} \odot \mathbf{G}^\text{R}, \\
-        \mathbf{\Sigma}^\text{in}_0 &= \mathbf{D} \odot \mathbf{G}^\text{n} ,
+        \mathbf{\Sigma}^\text{in}_0 &= \mathbf{D} \odot \mathbf{G}^\text{n} .
 \end{align}
 $$
 
-therefore a self-consistent loop is performed, where $\mathbf{G}^\text{R}$ and $\mathbf{G}^\text{n}$ are initially set as zero matrices and iteratively updated. About 70 iteration steps are usually enough to reach a convergence.
+Since the Green's functions enter the definition of the self-energy, a self-consistent loop is performed, where $\mathbf{G}^\text{R}$ and $\mathbf{G}^\text{n}$ are initially set as zero matrices and iteratively updated. About 70 iteration steps are usually enough to reach a convergence.
