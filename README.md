@@ -74,7 +74,7 @@ $$
 
 The self-energies describing the phase and momentum relaxation are defined in terms of the Green's function itself, therefore an iterative (self-consistent) loop needs to be performed.
 
-For the LinearChain model, the self-energies
+For the ```LinearChain``` model, the self-energies
 
 $$
 \Sigma_1=\left[\begin{array}{ccccc}
@@ -115,7 +115,7 @@ where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that
 The in-scattering terms
 
 $$
-\Sigma^\mathrm{in}_i = \Gamma_i \cdot f_i
+\Sigma^\mathrm{in}_i = \Gamma_i \cdot f_i ,
 $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
