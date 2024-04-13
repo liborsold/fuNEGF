@@ -51,7 +51,7 @@ $$
 and are used to solve for the *"electron occupation" Green's function*
 
 $$
-\mathbf{G}^{\mathrm{n}}=\mathbf{G}^{\mathrm{R}} \Sigma^{\mathrm{in}} \mathbf{G}^{\mathrm{A}}
+\mathbf{G}^{\mathrm{n}}=\mathbf{G}^{\mathrm{R}} \mathbf{\Sigma}^{\mathrm{in}} \mathbf{G}^{\mathrm{A}}
 $$
 
 which gives the *density matrix* 
@@ -150,7 +150,6 @@ The self-energies describing the phase and momentum relaxation are defined in te
 
 $$
         \mathbf{D} = D_0^\text{phase} 
-
         \left[\begin{array}{ccccc}
 1 & 1 & 1 & \cdots & 1 \\
 1 & 1 & 1 & \cdots & 1 \\
@@ -158,9 +157,7 @@ $$
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 1 & 1 & 1 & \cdots & 1
 \end{array}\right]
-
         + D_0^\text{phase-momentum}
-
         \left[\begin{array}{ccccc}
 1 & 0 & 0 & \cdots & 0 \\
 0 & 1 & 0 & \cdots & 0 \\
@@ -168,7 +165,6 @@ $$
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & 1
 \end{array}\right]
-
 $$
 
 and
