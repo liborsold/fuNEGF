@@ -112,7 +112,7 @@ $$
 
 where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that $\frac{\hbar v}{a} = -2 t / \sin (k a)$.
 
-The in-scattering terms
+The in-scattering termsss
 
 $$
 \Sigma^\mathrm{in}_{1,2} = \Gamma_{1,2} \cdot f_{1,2}
