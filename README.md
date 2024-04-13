@@ -44,7 +44,7 @@ $$
     \mathbf{G}^{\mathrm{A}} = \left[ \mathbf{G}^{\mathrm{R}} \right]^\dagger
 $$
 
-provide the *spectral function*
+they provide the *spectral function*
 
 $$
 \mathbf{A}=i\left[\mathbf{G}^{\mathrm{R}}-\mathbf{G}^{\mathrm{A}}\right]
@@ -61,6 +61,8 @@ which gives the *density matrix*
 $$
     \mathbf{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .
 $$
+
+The in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ is also defined by the physical model.
 
 
 Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma_1}$, right contact $\mathbf{\Sigma_2}$ and an intrinsic term $\mathbf{\Sigma_0}$, hence
