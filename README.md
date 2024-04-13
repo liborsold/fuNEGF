@@ -150,7 +150,7 @@ $$
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
 
-The self-energies describing the phase and momentum relaxation are defined in terms of the *Green's function itself*. The relaxation strength is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, defining a "mask" matrix
+The self-energies describing the **phase and phase-momentum relaxation** are defined in terms of the *Green's function itself*. The phase and phase-momentum relaxation *strength* is defined via the (scalar) coefficients $D_0^\text{phase}$ and $D_0^\text{phase-momentum}$, creating a "mask" matrix
 
 $$
         \mathbf{D} = D_0^\text{phase} 
@@ -171,7 +171,7 @@ $$
 \end{array}\right]
 $$
 
-used for an element-wise multiplication with the Green's function matrices
+which is used for an element-wise multiplication of the Green's function matrices
 
 $$
 \begin{align}
