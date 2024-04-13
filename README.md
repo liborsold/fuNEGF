@@ -114,8 +114,8 @@ where $v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)$ so that
 
 The in-scattering terms
 
-$$
+\begin{equation}
 \Sigma^\mathrm{in}_{1,2} = \Gamma_{1,2} \cdot f_{1,2}
-$$
+\end{equation}
 
  where $f_i$ is the Fermi-Dirac distribution function for contact $i$.
