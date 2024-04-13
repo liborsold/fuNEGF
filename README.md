@@ -91,7 +91,9 @@ $$
 $$
 
 Impurity can be added to the on-site energy as 
-$$ \hat{H}=\left[\begin{array}{ccccc}
+
+$$ 
+\hat{H}=\left[\begin{array}{ccccc}
 \ddots & \vdots & \vdots & \vdots & \ddots \\
 \cdots & \varepsilon & t & 0 & \cdots \\
 \cdots & t & \varepsilon+U & t & \cdots \\
