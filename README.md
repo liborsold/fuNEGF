@@ -2,13 +2,9 @@ Non-Equillibrium Green's Functions solvers and examples for educational purposes
 See the [documentation](https://liborsold.github.io/fuNEGF/).
 
 Install with 
-
-**
 ```
 pip install fuNEGF
 ```
-** 
-
 from the [project's PyPI repository](https://pypi.org/project/fuNEGF/).
 
 ## Structure
