@@ -65,7 +65,7 @@ $$
 The in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ is also defined by the physical model.
 
 
-Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma}$_1, right contact $\mathbf{\Sigma}$_2 and an intrinsic term $\mathbf{\Sigma}$_0, hence
+Both, the self-energy $\mathbf{\Sigma}$ and the in-scattering term $\mathbf{\Sigma}^{\mathrm{in}}$ are sums of the left contact $\mathbf{\Sigma}_1$, right contact $\mathbf{\Sigma}_2$ and an intrinsic term $\mathbf{\Sigma}_0$, hence
 
 $$ \begin{align}
         \mathbf{\Sigma}^{\mathrm{in}} &= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 + \mathbf{\Sigma}^{\mathrm{in}}_0 , \\
