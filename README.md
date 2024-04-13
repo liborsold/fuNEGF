@@ -66,9 +66,9 @@ NOTE: We use the (physically expressive) notation of S. Datta, where the self-en
 
 $$
 \begin{align}
-    \Sigma &\equiv \Sigma^\mathrm{R} , \\
-    G^\mathrm{n} &\equiv -i G^< , \\
-    \Sigma^\mathrm{in} &\equiv -i \Sigma^< .
+    \mathbf{\Sigma} &\equiv \mathbf{\Sigma}^\mathrm{R} , \\
+    \mathbf{G}^\mathrm{n} &\equiv -i \mathbf{G}^< , \\
+    \mathbf{\Sigma}^\mathrm{in} &\equiv -i \mathbf{\Sigma}^< .
 \end{align}
 $$
 
