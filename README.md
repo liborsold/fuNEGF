@@ -20,10 +20,10 @@ The complete description and calculation are provided in the ```examples/one-dim
 ![example](./example.png)
 
 ## Features
+* automatically-generated [documentation online](https://liborsold.github.io/fuNEGF/)
 * object-oriented
 * PEP8-compliant
-* including unit tests (limited for now)
-* with automatically generated [documentation online](https://liborsold.github.io/fuNEGF/)
+<!-- * including unit tests (limited for now) --> 
 
 
 ## The Theory In A Nutshell
