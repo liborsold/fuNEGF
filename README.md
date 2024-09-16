@@ -1,13 +1,14 @@
 # fuNEGF
-Non-Equillibrium Green's Functions (NEGF) solvers and examples for educational purposes. Limited to a 1D linear chain for now.
-See the [documentation](https://liborsold.github.io/fuNEGF/).
+**_Solve the Non-Equillibrium Green's Functions (NEGF) transport on examples for educational purposes. Limited to a 1D linear chain for now.
+See the [documentation](https://liborsold.github.io/fuNEGF/)._**
 
 ```
 pip install fuNEGF
 ```
-from the [project's PyPI repository](https://pypi.org/project/fuNEGF/).
 
-## Structure
+If you find this package useful, please cite **L. Vojáček. _Multiscale modeling of spin-orbitronic phenomena at metal, oxide, and 2D material interfaces for spintronic devices._ PhD thesis (2024).**
+
+## Package structure
 * the ```LinearChain``` class including the NEGF routines resides in ```src/fuNEGF/models.py```
 * a Jupyter notebook ```examples/one-dimensional_channel.ipynb``` contains the linear chain case study with the underlying physics explained
 * a Jupyter notebok ```examples/time_complexity.ipynb``` contains a time complexity study of constructing the model $\mathcal{O}(N)$ and calculating the transmission coefficient $\mathcal{O}(N^2)$
