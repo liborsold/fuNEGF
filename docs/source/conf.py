@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.abspath('../../src/'))
 project = 'fuNEGF'
 copyright = '2024, Libor Vojáček'
 author = 'Libor Vojáček'
-release = '0.1.1'
+release = '0.1.11'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -44,5 +44,8 @@ html_theme_options = {
     "use_repository_button": True,
     "repository_branch": "master",
     "path_to_docs": "docs/source/",
+    "logo": {
+        "text": f"<b>fuNEGF</b> {release} documentation", # "image_light": "_static/logo-light.png","image_dark": "_static/logo-light.png",
+    },
 }
 

@@ -5,34 +5,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class LinearChain:
-    """Linear chain tight-binding model with NEGF solver.
-    Include arbitrary on-site potential impurities.
-
-    Attributes:
-        N (int): Number of sites in the chain. Defaults to 100. 
-        eps_0 (float): On-site energy. Defaults to 0.
-        t (float): Nearest-neighbor hopping. Defaults to 1.
-        a (float): Lattice constant. Defaults to 1.
-        H_impurity (numpy array, optional): Impurity Hamiltonian (typically on-site potential (Anderson) disorder). Defaults to None.
-        make_H_periodic (bool, optional): If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.
-        plot_dispersion (bool, optional): If True, the dispersion will be plotted after constructing the Hamiltonian. Defaults to True.
-
-        H (N-by-N numpy array): Hamiltonian matrix.
-        E_vs_k_fun (function): Analytical dispersion E(k).
-        k_vs_E_fun (function): Inverse dispersion k(E).
-        k_states (list): The N allowed values of the k quantum number.
-        E_levels (list): The corresponding energy levels.
-        Sigma_1_fun_k (function): Self-energy Sigma_1(k).
-        Sigma_2_fun_k (function): Self-energy Sigma_2(k).
-        Sigma_fun_k (function): Self-energy Sigma(k).
-        Gamma_1_fun_k (function): Broadening Gamma_1(k).
-        Gamma_2_fun_k (function): Broadening Gamma_2(k).
-        f_1 (int): Fermi-Dirac distribution for lead 1.
-        f_2 (int): Fermi-Dirac distribution for lead 2.
-        Sigma_in_1_fun_k (function): In-scattering self-energy Sigma_in_1(k).
-        Sigma_in_2_fun_k (function): In-scattering self-energy Sigma_in_2(k).
-        Sigma_in_fun_k (function): In-scattering self-energy Sigma_in(k).
+    """Linear chain tight-binding model with NEGF solver. Include arbitrary on-site potential impurities.
     """
+        # Args:
+        # H (N-by-N numpy array): Hamiltonian matrix.
+        # E_vs_k_fun (function): Analytical dispersion E(k).
+        # k_vs_E_fun (function): Inverse dispersion k(E).
+        # k_states (list): The N allowed values of the k quantum number.
+        # E_levels (list): The corresponding energy levels.
+        # Sigma_1_fun_k (function): Self-energy Sigma_1(k).
+        # Sigma_2_fun_k (function): Self-energy Sigma_2(k).
+        # Sigma_fun_k (function): Self-energy Sigma(k).
+        # Gamma_1_fun_k (function): Broadening Gamma_1(k).
+        # Gamma_2_fun_k (function): Broadening Gamma_2(k).
+        # f_1 (int): Fermi-Dirac distribution for lead 1.
+        # f_2 (int): Fermi-Dirac distribution for lead 2.
+        # Sigma_in_1_fun_k (function): In-scattering self-energy Sigma_in_1(k).
+        # Sigma_in_2_fun_k (function): In-scattering self-energy Sigma_in_2(k).
+        # Sigma_in_fun_k (function): In-scattering self-energy Sigma_in(k).
 
     def __init__(
         self,
