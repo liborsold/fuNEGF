@@ -38,6 +38,7 @@ Navigation
 .. toctree::
    :maxdepth: 3
 
+   theory
    modules
    classes
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to fuNEGF’s documentation! &#8212; fuNEGF 0.1.11 documentation</title>
+    <title>Theory &#8212; fuNEGF 0.1.11 documentation</title>
   
   
   
@@ -40,10 +40,12 @@
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Theory" href="theory.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Welcome to fuNEGF’s documentation!" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -106,8 +108,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -126,7 +126,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -149,8 +149,8 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Theory</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/fuNEGF.models.html">fuNEGF.models</a></li>
 </ul>
@@ -225,7 +225,7 @@
       
       
       
-      <li><a href="_sources/index.rst" target="_blank"
+      <li><a href="_sources/theory.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +309,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to fuNEGF’s documentation!</h1>
+    <h1>Theory</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -319,9 +319,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation">Navigation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-chain-model">Linear Chain Model</a></li>
 </ul>
             </nav>
         </div>
@@ -333,57 +331,117 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="welcome-to-funegf-s-documentation">
-<h1>Welcome to fuNEGF’s documentation!<a class="headerlink" href="#welcome-to-funegf-s-documentation" title="Link to this heading">#</a></h1>
-<p>The <a class="reference external" href="https://github.com/liborsold/fuNEGF/">fuNEGF project</a> is a Python package for the calculation of the electronic transport properties of nanostructures using the Non-Equilibrium Green’s Function (NEGF) formalism for educational purposes. Limited to a 1D linear chain for now.</p>
-<a class="reference internal image-reference" href="_images/example_fuNEGF.png"><img alt="_images/example_fuNEGF.png" class="align-center" src="_images/example_fuNEGF.png" style="width: 650px;" /></a>
-<section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fuNEGF</span>
-</pre></div>
-</div>
-<p>then</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">liborsold</span><span class="o">/</span><span class="n">fuNEGF</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-<p>and execute the <code class="docutils literal notranslate"><span class="pre">./examples/one-dimensional_channel.ipynb</span></code> Jupyter notebook to see an example of calculating the NEGF transmission and chemical potential in the presence of impurities.</p>
-</section>
-<section id="navigation">
-<h2>Navigation<a class="headerlink" href="#navigation" title="Link to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory.html#linear-chain-model">Linear Chain Model</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/fuNEGF.models.html">fuNEGF.models</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain"><code class="docutils literal notranslate"><span class="pre">LinearChain</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.G_R_fun"><code class="docutils literal notranslate"><span class="pre">LinearChain.G_R_fun()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.Greens_functions_solver"><code class="docutils literal notranslate"><span class="pre">LinearChain.Greens_functions_solver()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.add_H_impurity"><code class="docutils literal notranslate"><span class="pre">LinearChain.add_H_impurity()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical"><code class="docutils literal notranslate"><span class="pre">LinearChain.compare_dispersion_analytic_vs_numerical()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.construct_H"><code class="docutils literal notranslate"><span class="pre">LinearChain.construct_H()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.plot_occupation"><code class="docutils literal notranslate"><span class="pre">LinearChain.plot_occupation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.plot_onsite_energy"><code class="docutils literal notranslate"><span class="pre">LinearChain.plot_onsite_energy()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classes.html#fuNEGF.models.LinearChain.plot_transmission"><code class="docutils literal notranslate"><span class="pre">LinearChain.plot_transmission()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
-<section id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+  <section id="theory">
+<h1>Theory<a class="headerlink" href="#theory" title="Link to this heading">#</a></h1>
+<p>The <em>retarded Green’s function</em></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{G}^{\mathrm{R}}=[E \mathbf{I}-\mathbf{H}-\mathbf{\Sigma}]^{-1}\]</div>
+<p>is a function of energy <span class="math notranslate nohighlight">\(E\)</span> multiplied by the identity matrix <span class="math notranslate nohighlight">\(\mathbf{I}\)</span>. The Hamiltonian <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> and self-energy <span class="math notranslate nohighlight">\(\mathbf{\Sigma}\)</span> matrices are to be defined by the physical model.</p>
+<p>Along with the <em>advanced Green’s function</em></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{G}^{\mathrm{A}} = \left[ \mathbf{G}^{\mathrm{R}} \right]^\dagger\]</div>
+<p>they provide the <em>spectral function</em></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}=i\left[\mathbf{G}^{\mathrm{R}}-\mathbf{G}^{\mathrm{A}}\right]\]</div>
+<p>and are used to solve for the <em>“electron occupation” Green’s function</em></p>
+<div class="math notranslate nohighlight">
+\[\mathbf{G}^{\mathrm{n}}=\mathbf{G}^{\mathrm{R}} \mathbf{\Sigma}^{\mathrm{in}} \mathbf{G}^{\mathrm{A}}\]</div>
+<p>which gives the <em>density matrix</em></p>
+<div class="math notranslate nohighlight">
+\[\hat{\rho} = \mathbf{G}^{\mathrm{n}} / 2\pi .\]</div>
+<p>The in-scattering term <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{\mathrm{in}}\)</span> is also defined by the physical model.</p>
+<p>Both, the self-energy <span class="math notranslate nohighlight">\(\mathbf{\Sigma}\)</span> and the in-scattering term <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^{\mathrm{in}}\)</span> are sums of the left contact <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_1\)</span>, right contact <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_2\)</span> and an intrinsic term <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_0\)</span>, hence</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+     \mathbf{\Sigma} &amp;= \mathbf{\Sigma}_1 + \mathbf{\Sigma}_2 + \mathbf{\Sigma}_0 , \\
+     \mathbf{\Sigma}^{\mathrm{in}} &amp;= \mathbf{\Sigma}^{\mathrm{in}}_1 + \mathbf{\Sigma}^{\mathrm{in}}_2 + \mathbf{\Sigma}^{\mathrm{in}}_0 .
+\end{align}\end{split}\]</div>
+<p>NOTE: We use the (physically expressive) notation of S. Datta, where the self-energies and Green’s functions in relation to the standard notation (on the right) are defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \mathbf{\Sigma} &amp;\equiv \mathbf{\Sigma}^\mathrm{R} , \\
+    \mathbf{G}^\mathrm{n} &amp;\equiv -i \mathbf{G}^&lt; , \\
+    \mathbf{\Sigma}^\mathrm{in} &amp;\equiv -i \mathbf{\Sigma}^&lt; .
+\end{align}\end{split}\]</div>
+<section id="linear-chain-model">
+<h2>Linear Chain Model<a class="headerlink" href="#linear-chain-model" title="Link to this heading">#</a></h2>
+<p>For the <code class="docutils literal notranslate"><span class="pre">LinearChain</span></code> model, the <strong>Hamiltonian</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{ij} = \begin{cases}
+            \epsilon_0, &amp; \text { if } i=j \\
+            t, &amp; \text{ if } i \neq j
+        \end{cases}\end{split}\]</div>
+<p>Impurity potential <span class="math notranslate nohighlight">\(U\)</span> can be added to the on-site energy as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H}=\left[
+    \begin{array}{ccccc}
+\ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
+\cdots &amp; \varepsilon &amp; t &amp; 0 &amp; \cdots \\
+\cdots &amp; t &amp; \varepsilon+U &amp; t &amp; \cdots \\
+\cdots &amp; 0 &amp; t &amp; \varepsilon &amp; \cdots \\
+\ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots
+\end{array}
+\right] .\end{split}\]</div>
+<p>The <strong>self-energies</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{\Sigma}_1=\left[\begin{array}{ccccc}
+\mathrm{te}^{i k a} &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
+\end{array}\right], \quad \mathbf{\Sigma}_2=\left[\begin{array}{ccccc}
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+\vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; \mathrm{te}^{i k a}
+\end{array}\right] ,\end{split}\]</div>
+<p>with the broadening functions <span class="math notranslate nohighlight">\(\mathbf{\Gamma} \equiv i\left[ \mathbf{\Sigma} - \mathbf{\Sigma}^\dagger\right]\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{\Gamma}_1=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
+\end{array}\right], \quad \mathbf{\Gamma}_2=\frac{\hbar v}{a}\left[\begin{array}{ccccc}
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+\vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cdots &amp; 0 &amp; 0 &amp; 1
+\end{array}\right] ,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v=\mathrm{d} E /(\hbar \mathrm{d} k) = -2 a t / \hbar \sin (k a)\)</span> so that <span class="math notranslate nohighlight">\(\frac{\hbar v}{a} = -2 t / \sin (k a)\)</span>.</p>
+<p>The in-scattering terms</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\Sigma}^\mathrm{in}_i = \mathbf{\Gamma}_i \cdot f_i(E) ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(f_i(E)\)</span> is the Fermi-Dirac distribution function for contact <span class="math notranslate nohighlight">\(i \in \set{1, 2}\)</span>.</p>
+<p>The self-energies describing the <strong>phase and phase-momentum relaxation</strong> are defined in terms of the Green’s functions themselves. Their strength is defined via the (scalar) coefficients <span class="math notranslate nohighlight">\(D_0^\text{phase}\)</span> and <span class="math notranslate nohighlight">\(D_0^\text{phase-momentum}\)</span>, creating a “mask” matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{D} = D_0^\text{phase}
+        \left[\begin{array}{ccccc}
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1
+\end{array}\right]
+        + D_0^\text{phase-momentum}
+        \left[\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+\end{array}\right] ,\end{split}\]</div>
+<p>which is used for an element-wise multiplication <span class="math notranslate nohighlight">\(\odot\)</span> of the Green’s function matrices</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \mathbf{\Sigma}_0 &amp;= \mathbf{D} \odot \mathbf{G}^\text{R}, \\
+        \mathbf{\Sigma}^\text{in}_0 &amp;= \mathbf{D} \odot \mathbf{G}^\text{n} .
+\end{align}\end{split}\]</div>
+<p>Since the Green’s functions enter the definition of the self-energy, a self-consistent loop is performed, where <span class="math notranslate nohighlight">\(\mathbf{G}^\text{R}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{G}^\text{n}\)</span> are initially set as zero matrices and iteratively updated, along with <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_0\)</span> and <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^\text{in}_0\)</span>. About 70 iteration steps are usually enough to reach a convergence.</p>
 </section>
 </section>
 
@@ -398,12 +456,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to fuNEGF’s documentation!</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="theory.html"
+       href="modules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Theory</p>
+        <p class="prev-next-title">Modules</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -423,9 +490,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation">Navigation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-chain-model">Linear Chain Model</a></li>
 </ul>
   </nav></div>
 
