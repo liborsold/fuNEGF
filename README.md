@@ -1,6 +1,6 @@
 # fuNEGF
 <i>**Solve the Non-Equillibrium Green's Functions (NEGF) transport on examples for educational purposes. Limited to a 1D linear chain for now.**</i>
-See the [documentation](https://liborsold.github.io/fuNEGF/).
+See the [documentation website](https://liborsold.github.io/fuNEGF/).
 
 ```
 pip install fuNEGF
@@ -21,7 +21,7 @@ The complete description and calculation are provided in the ```examples/one-dim
 ![example](./example.png)
 
 ## Features
-* automatically-generated [documentation online](https://liborsold.github.io/fuNEGF/)
+* [documentation website](https://liborsold.github.io/fuNEGF/)
 * object-oriented
 * PEP8-compliant
 <!-- * including unit tests (limited for now) --> 
