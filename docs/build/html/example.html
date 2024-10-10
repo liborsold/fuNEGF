@@ -296,9 +296,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-a-linear-chain-tight-binding-hamiltonian">1. Construct a linear-chain tight-binding Hamiltonian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impurity-quantum-resistors-in-series">2. Impurity - <em>quantum resistors in series</em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-function">3. Transmission function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-chain-tight-binding-hamiltonian">1. Linear-chain tight-binding Hamiltonian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impurity-potential">2. Impurity potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-with-impurities">3. Chemical potential with impurities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-relaxation">3.1. No relaxation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-relaxation">3.2. Phase relaxation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-and-momentum-relaxation">3.3. Phase and momentum relaxation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-function">4. Transmission function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-impurity">4.1. Single impurity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#various-impurities">4.2. Various impurities</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -314,8 +324,8 @@ document.write(`
 <h1>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h1>
 <p>An example of use is given in <code class="docutils literal notranslate"><span class="pre">./examples/one-dimensional_channel.ipynb</span></code>.</p>
 <p>There is also a time-complexity study in <code class="docutils literal notranslate"><span class="pre">./examples/time_complexity.ipynb</span></code>.</p>
-<div class="section" id="construct-a-linear-chain-tight-binding-hamiltonian">
-<h2>1. Construct a linear-chain tight-binding Hamiltonian<a class="headerlink" href="#construct-a-linear-chain-tight-binding-hamiltonian" title="Permalink to this heading">#</a></h2>
+<div class="section" id="linear-chain-tight-binding-hamiltonian">
+<h2>1. Linear-chain tight-binding Hamiltonian<a class="headerlink" href="#linear-chain-tight-binding-hamiltonian" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fuNEGF.models</span> <span class="kn">import</span> <span class="n">LinearChain</span>
 
 <span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">eps_0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">H_impurity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_dispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -323,8 +333,8 @@ document.write(`
 </div>
 <a class="reference internal image-reference" href="_images/linear_chain_dispersion_analytic_vs_diagonalized.png"><img alt="_images/linear_chain_dispersion_analytic_vs_diagonalized.png" class="align-center" src="_images/linear_chain_dispersion_analytic_vs_diagonalized.png" style="width: 550px;" /></a>
 </div>
-<div class="section" id="impurity-quantum-resistors-in-series">
-<h2>2. Impurity - <em>quantum resistors in series</em><a class="headerlink" href="#impurity-quantum-resistors-in-series" title="Permalink to this heading">#</a></h2>
+<div class="section" id="impurity-potential">
+<h2>2. Impurity potential<a class="headerlink" href="#impurity-potential" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">H_impurity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
 
 <span class="c1"># (1) add a single impurity in the middle</span>
@@ -336,22 +346,57 @@ document.write(`
 </div>
 <a class="reference internal image-reference" href="_images/impurity_single_middle.png"><img alt="_images/impurity_single_middle.png" class="align-center" src="_images/impurity_single_middle.png" style="width: 450px;" /></a>
 </div>
+<div class="section" id="chemical-potential-with-impurities">
+<h2>3. Chemical potential with impurities<a class="headerlink" href="#chemical-potential-with-impurities" title="Permalink to this heading">#</a></h2>
+<p>There is a <strong>potential drop</strong> at the impurities - the impurities act as <em>quantum resistors in series</em>.
+This can be demonstrated by calculating the occupation function profile.</p>
+<div class="section" id="no-relaxation">
+<h3>3.1. No relaxation<a class="headerlink" href="#no-relaxation" title="Permalink to this heading">#</a></h3>
+<p>Without any relaxation mechanism, strong resonances arise, making the potential drop unclear.</p>
+<a class="reference internal image-reference" href="_images/single_imp_middle_no_relaxation.png"><img alt="_images/single_imp_middle_no_relaxation.png" class="align-center" src="_images/single_imp_middle_no_relaxation.png" style="width: 350px;" /></a>
+</div>
+<div class="section" id="phase-relaxation">
+<h3>3.2. Phase relaxation<a class="headerlink" href="#phase-relaxation" title="Permalink to this heading">#</a></h3>
+<p>Phase relaxation attenuates the Fabry-Pérot resonances.</p>
+<a class="reference internal image-reference" href="_images/single_imp_middle_phase_relaxation.png"><img alt="_images/single_imp_middle_phase_relaxation.png" class="align-center" src="_images/single_imp_middle_phase_relaxation.png" style="width: 350px;" /></a>
+</div>
+<div class="section" id="phase-and-momentum-relaxation">
+<h3>3.3. Phase and momentum relaxation<a class="headerlink" href="#phase-and-momentum-relaxation" title="Permalink to this heading">#</a></h3>
+<p>With an additional momentum relaxation, the potential drop is partially distributed over the whole channel length.</p>
+<a class="reference internal image-reference" href="_images/single_imp_middle_phase_and_momentum_relaxation.png"><img alt="_images/single_imp_middle_phase_and_momentum_relaxation.png" class="align-center" src="_images/single_imp_middle_phase_and_momentum_relaxation.png" style="width: 350px;" /></a>
+</div>
+</div>
 <div class="section" id="transmission-function">
-<h2>3. Transmission function<a class="headerlink" href="#transmission-function" title="Permalink to this heading">#</a></h2>
+<h2>4. Transmission function<a class="headerlink" href="#transmission-function" title="Permalink to this heading">#</a></h2>
+<p>The transmission function reads</p>
 <div class="math notranslate nohighlight">
-\[\bar{T}(E)=\operatorname{Trace}\left[\boldsymbol{\Gamma}_1 \mathbf{G}^R \boldsymbol{\Gamma}_2 \mathbf{G}^A\right]\]</div>
+\[\bar{T}(E)=\operatorname{Trace}\left[\boldsymbol{\Gamma}_1 \mathbf{G}^R \boldsymbol{\Gamma}_2 \mathbf{G}^A\right].\]</div>
+<div class="section" id="single-impurity">
+<h3>4.1. Single impurity<a class="headerlink" href="#single-impurity" title="Permalink to this heading">#</a></h3>
+<p>A single impurity in the center</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">H_impurity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+<span class="n">H_impurity</span><span class="p">[</span><span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">N</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">t</span>
+<span class="n">chain</span><span class="o">.</span><span class="n">add_H_impurity</span><span class="p">(</span><span class="n">H_impurity</span><span class="p">,</span> <span class="n">plot_dispersion</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">chain</span><span class="o">.</span><span class="n">plot_transmission</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>reduces the transmission from the clean limit <span class="math notranslate nohighlight">\(T(E) = 1.0\)</span> to (at most) half of that value <span class="math notranslate nohighlight">\(T(E=0.0) = 0.5\)</span>:</p>
+<a class="reference internal image-reference" href="_images/transmission_single_imp_middle.png"><img alt="_images/transmission_single_imp_middle.png" class="align-center" src="_images/transmission_single_imp_middle.png" style="width: 250px;" /></a>
+</div>
+<div class="section" id="various-impurities">
+<h3>4.2. Various impurities<a class="headerlink" href="#various-impurities" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
-<dt>Cases:</dt><dd><ol class="arabic simple">
-<li><p>without impurities it is constant <span class="math notranslate nohighlight">\(T(E) = 1.0\)</span></p></li>
-<li><p>with a single impurity of <span class="math notranslate nohighlight">\(U=-2 t\)</span>, it reaches maximum of <span class="math notranslate nohighlight">\(T(E) = 0.5\)</span></p></li>
+<dt>Finally, let us compare the transmission for several cases:</dt><dd><ol class="arabic simple">
+<li><p>without impurities, the transmission function is constant <span class="math notranslate nohighlight">\(T(E) = 1.0\)</span></p></li>
+<li><p>with a single impurity of <span class="math notranslate nohighlight">\(U=-2.0 t\)</span>, it reaches maximum of <span class="math notranslate nohighlight">\(T(E) = 0.5\)</span></p></li>
 <li><p>with two impurities of <span class="math notranslate nohighlight">\(U=-t\)</span> each, the function looks almost the same, but with strong oscillations</p></li>
+<li><p>with many random impurities (total strength <span class="math notranslate nohighlight">\(\Sigma_i U_i = -2.0 t\)</span>)</p></li>
 </ol>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chain</span><span class="o">.</span><span class="n">plot_transmission</span><span class="p">()</span>
-</pre></div>
+<a class="reference internal image-reference" href="_images/example_fuNEGF.png"><img alt="_images/example_fuNEGF.png" class="align-center" src="_images/example_fuNEGF.png" style="width: 950px;" /></a>
 </div>
-<a class="reference internal image-reference" href="_images/transmission_single_imp_middle.png"><img alt="_images/transmission_single_imp_middle.png" class="align-center" src="_images/transmission_single_imp_middle.png" style="width: 250px;" /></a>
 </div>
 </div>
 
@@ -403,9 +448,19 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-a-linear-chain-tight-binding-hamiltonian">1. Construct a linear-chain tight-binding Hamiltonian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impurity-quantum-resistors-in-series">2. Impurity - <em>quantum resistors in series</em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-function">3. Transmission function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-chain-tight-binding-hamiltonian">1. Linear-chain tight-binding Hamiltonian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impurity-potential">2. Impurity potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-potential-with-impurities">3. Chemical potential with impurities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-relaxation">3.1. No relaxation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-relaxation">3.2. Phase relaxation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-and-momentum-relaxation">3.3. Phase and momentum relaxation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transmission-function">4. Transmission function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-impurity">4.1. Single impurity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#various-impurities">4.2. Various impurities</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
