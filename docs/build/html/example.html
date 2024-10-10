@@ -327,6 +327,7 @@ document.write(`
 <div class="section" id="linear-chain-tight-binding-hamiltonian">
 <h2>1. Linear-chain tight-binding Hamiltonian<a class="headerlink" href="#linear-chain-tight-binding-hamiltonian" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fuNEGF.models</span> <span class="kn">import</span> <span class="n">LinearChain</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">eps_0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">H_impurity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_dispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

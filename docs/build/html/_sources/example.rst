@@ -12,6 +12,7 @@ There is also a time-complexity study in ``./examples/time_complexity.ipynb``.
 .. code-block:: python
 
    from fuNEGF.models import LinearChain
+   import numpy as np
 
    chain = LinearChain(N=100, eps_0=0.0, t=1.0, a=1.0, H_impurity=None, plot_dispersion=True)
 
