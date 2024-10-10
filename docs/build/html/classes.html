@@ -1,48 +1,50 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classes &#8212; fuNEGF 0.1.11 documentation</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="_static/documentation_options.js?v=86f9da5d"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'classes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -56,23 +58,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -94,20 +92,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -122,9 +112,6 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="index.html">
@@ -133,29 +120,18 @@
   
   
   
-  
     <p class="title logo__title"><b>fuNEGF</b> 0.1.11 documentation</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/fuNEGF.models.html">fuNEGF.models</a></li>
 </ul>
-</details></li>
+</li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Classes</a></li>
 </ul>
 
@@ -172,7 +148,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -181,14 +157,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -278,28 +254,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -340,32 +314,32 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
-  <section id="classes">
-<h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h1>
+  <div class="section" id="classes">
+<h1>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h1>
 <p>For now, there is the LinearChain class including both the model and NEGF solver routines. This will be in future separated into a generic System class, with child classes of different specific systems (like LinearChain).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fuNEGF.models.</span></span><span class="sig-name descname"><span class="pre">LinearChain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fuNEGF.models.</span></span><span class="sig-name descname"><span class="pre">LinearChain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Linear chain tight-binding model with NEGF solver. Include arbitrary on-site potential impurities.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.G_R_fun">
-<span class="sig-name descname"><span class="pre">G_R_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sigma_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.G_R_fun" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">G_R_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sigma_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.G_R_fun" title="Permalink to this definition">#</a></dt>
 <dd><p>The retarded Green’s function for a given k and energy E.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
 <li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
 <li><p><strong>Sigma_0</strong> (<em>N-by-N numpy array</em><em>, </em><em>optional</em>) – The internal self-energy. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>the retarded Green’s function in matrix form.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>N-by-N numpy array</p>
 </dd>
 </dl>
@@ -373,13 +347,13 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.Greens_functions_solver">
-<span class="sig-name descname"><span class="pre">Greens_functions_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.Greens_functions_solver" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">Greens_functions_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.Greens_functions_solver" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Self-consistent iterative NEGF solver in case where the phase and momentum relaxation</dt><dd><p>are defined in terms of the Green’s functions themselves (see Datta’s Lessons from Nanoelectronics B).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
 <li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
@@ -388,14 +362,14 @@ document.write(`
 <li><p><strong>N_sc</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of self-consistent iteration steps: typically a value around 50 should be enough. Defaults to 70.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><dl class="simple">
 <dt>the self-consistently solved Green’s functions (retarded, advanced, electron occupation), the internal self-energy Sigma_0,</dt><dd><p>and the in-scattering self-energy Sigma_in_0.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>N-by-N numpy arrays</p>
 </dd>
 </dl>
@@ -403,10 +377,10 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.add_H_impurity">
-<span class="sig-name descname"><span class="pre">add_H_impurity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.add_H_impurity" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add_H_impurity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.add_H_impurity" title="Permalink to this definition">#</a></dt>
 <dd><p>Add an impurity Hamiltonian.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>H_impurity</strong> (<em>N-by-N numpy array</em>) – The impurity Hamiltonian (typically an Anderson disorder).</p></li>
 <li><p><strong>plot_dispersion</strong> (<em>bool</em><em>, </em><em>optional</em>) – Plot the numerical and analytical dispersion. Defaults to False.</p></li>
@@ -417,16 +391,16 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical">
-<span class="sig-name descname"><span class="pre">compare_dispersion_analytic_vs_numerical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">compare_dispersion_analytic_vs_numerical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.compare_dispersion_analytic_vs_numerical" title="Permalink to this definition">#</a></dt>
 <dd><p>Plots a comparison of the analytical and numerical dispersion.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.construct_H">
-<span class="sig-name descname"><span class="pre">construct_H</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_H_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.construct_H" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">construct_H</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_H_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.construct_H" title="Permalink to this definition">#</a></dt>
 <dd><p>Construct the linear chain tight-binding Hamiltonian.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>make_H_periodic</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.</p></li>
 <li><p><strong>print_H_matrix</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, prints the Hamiltonian matrix. Defaults to False.</p></li>
@@ -437,14 +411,14 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_occupation">
-<span class="sig-name descname"><span class="pre">plot_occupation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E_to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_occupation" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_occupation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D0_phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D0_phase_momentum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_sc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E_to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_occupation" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Plot the occupation f(j) of the sites j in the chain, which in the case f1=1, f2=0 corresponds to the</dt><dd><p>electrochemical potential mu(j) = qV f(j), where a potential V is imagined to be applied across the
 device and q is the electron charge.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>D0_phase</strong> (<em>float</em>) – The phase relaxation parameter.</p></li>
 <li><p><strong>D0_phase_momentum</strong> (<em>float</em>) – The phase+momentum relaxation parameter.</p></li>
@@ -460,10 +434,10 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_onsite_energy">
-<span class="sig-name descname"><span class="pre">plot_onsite_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_onsite_energy" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_onsite_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_onsite_energy" title="Permalink to this definition">#</a></dt>
 <dd><p>Plot the on-site energy as horizontal lines.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
 </dd>
 </dl>
@@ -471,10 +445,10 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fuNEGF.models.LinearChain.plot_transmission">
-<span class="sig-name descname"><span class="pre">plot_transmission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_transmission" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_transmission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_transmission" title="Permalink to this definition">#</a></dt>
 <dd><p>Plots the transmission function T(E) given by T = Tr[Gamma_1 G_R Gamma_2 G_A].</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
 </dd>
 </dl>
@@ -482,7 +456,7 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
 </dd></dl>
 
-</section>
+</div>
 
 
                 </article>
@@ -490,10 +464,11 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="generated/fuNEGF.models.html"
@@ -504,7 +479,10 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
         <p class="prev-next-title">fuNEGF.models</p>
       </div>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -512,7 +490,6 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -552,7 +529,6 @@ By Libor Vojáček
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2024, Libor Vojáček.
@@ -579,8 +555,8 @@ By Libor Vojáček
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -39,6 +39,7 @@ Navigation
    :maxdepth: 3
 
    theory
+   example
    modules
    classes
 
