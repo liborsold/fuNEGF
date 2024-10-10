@@ -130,15 +130,15 @@ reduces the transmission from the clean limit :math:`T(E) = 1.0` to (at most) ha
    :align: center
 
 
-4.2. Various impurities
+4.2. Different impurity distributions
 --------------------------------------
 
 Let us now compare the transmission for several cases.
-
    1. Without impurities, the transmission function is constant :math:`T(E) = 1.0 = \mathrm{const.}`.
    2. With a single impurity of :math:`U=-2.0 t`, the transmission reaches at most the half of the clean-limit maximum :math:`T(E=0.0) = 0.5`.
    3. With two impurities of :math:`U=-t` each, the function looks almost the same but with strong resonances.
    4. With many distributed impurities of equivalent total strength :math:`\Sigma_i U_i = -2.0 t`, the transmission starts to resemble the clean limit :math:`T(E) = 1.0 = \mathrm{const.}`
+
 
 .. image::
    ./_images/example_fuNEGF.png
