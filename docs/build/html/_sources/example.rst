@@ -17,6 +17,11 @@ There is also a time-complexity study in ``./examples/time_complexity.ipynb``.
    chain = LinearChain(N=100, eps_0=0.0, t=1.0, a=1.0, H_impurity=None, plot_dispersion=True)
 
 .. image::
+   ./_images/clean_wire.png
+   :width: 370px
+   :align: center
+
+.. image::
    ./_images/linear_chain_dispersion_analytic_vs_diagonalized.png
    :width: 550px
    :align: center
@@ -33,6 +38,12 @@ There is also a time-complexity study in ``./examples/time_complexity.ipynb``.
 
    chain.add_H_impurity(H_impurity, plot_dispersion=False)
    chain.plot_onsite_energy()
+
+.. image::
+   ./_images/single_middle_shifted_more.png
+   :width: 450px
+   :align: center
+
 
 .. image::
    ./_images/impurity_single_middle.png
@@ -53,6 +64,7 @@ This can be demonstrated by calculating the occupation function profile.
 Without any relaxation mechanism, strong resonances arise, making the potential drop unclear.
 
 .. code-block:: python
+
    # no relaxation
    D0_phase = 0.00 * t**2
    D0_phase_momentum = 0.00 * t**2
@@ -61,7 +73,7 @@ Without any relaxation mechanism, strong resonances arise, making the potential 
 
 .. image::
    ./_images/single_imp_middle_no_relaxation.png
-   :width: 350px
+   :width: 380px
    :align: center
 
 3.2. Phase relaxation
@@ -70,6 +82,7 @@ Without any relaxation mechanism, strong resonances arise, making the potential 
 Phase relaxation attenuates the Fabry-Pérot resonances.
 
 .. code-block:: python
+
    # only phase
    D0_phase = 0.09 * t**2
    D0_phase_momentum = 0.00 * t**2
@@ -78,7 +91,7 @@ Phase relaxation attenuates the Fabry-Pérot resonances.
 
 .. image::
    ./_images/single_imp_middle_phase_relaxation.png
-   :width: 350px
+   :width: 380px
    :align: center
 
 
@@ -88,6 +101,7 @@ Phase relaxation attenuates the Fabry-Pérot resonances.
 With an additional momentum relaxation, the potential drop is partially distributed over the whole channel length.
 
 .. code-block:: python
+
    # phase and momentum
    D0_phase = 0.09 * t**2
    D0_phase_momentum = 0.03 * t**2
@@ -96,7 +110,7 @@ With an additional momentum relaxation, the potential drop is partially distribu
 
 .. image::
    ./_images/single_imp_middle_phase_and_momentum_relaxation.png
-   :width: 350px
+   :width: 380px
    :align: center
 
 
@@ -139,6 +153,33 @@ Let us now compare the transmission for several cases.
    2. With a single impurity of :math:`U=-2.0 t`, the transmission reaches at most the half of the clean-limit maximum :math:`T(E=0.0) = 0.5`.
    3. With two impurities of :math:`U=-t` each, the function looks almost the same but with strong resonances.
    4. With many distributed impurities of equivalent total strength :math:`\Sigma_i U_i = -2.0 t`, the transmission starts to resemble the clean limit :math:`T(E) = 1.0 = \mathrm{const.}`
+
+
+.. code-block:: python
+
+   # RELAXATION
+   D0_phase = 0.12 * t**2
+   D0_phase_momentum = 0.03 * t**2
+   N_sc = 90
+
+   # IMPURITY HAMILTONIANS
+   H_imp_clean = np.zeros((N, N))
+   H_imp_single = np.zeros((N, N))
+   H_imp_single[N // 2, N // 2] = -2 * t
+   ...
+
+   H_impurities = [H_imp_clean, H_imp_single, H_imp_double, H_imp_multiple]
+
+   # CALCULATE AND PLOT
+   fig, axes = plt.subplots(5,len(H_impurities))
+
+   for i, H_imp in enumerate(H_impurities):
+      chain = LinearChain(N, eps_0, t, a, H_impurity=H_imp, plot_dispersion=False)
+      chain.plot_onsite_energy(axes[0, i])
+      chain.plot_occupation(
+         D0_phase=0, D0_phase_momentum=0, E_to_plot=E_to_plot, N_sc=N_sc, ax=axes[1, i]
+      )
+   ...
 
 
 .. image::
