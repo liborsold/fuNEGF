@@ -1,6 +1,12 @@
 Theory
 ======================
 
+Here, we summarize the physics used by the ``fuNEGF`` package in a nutshell. For a full account please refer to `Supriyo Datta - Lessons from Nanoelectronics — Part B: Quantum
+Transport (2018) <https://www.worldscientific.com/worldscibooks/10.1142/10440-vol2#t=aboutBook>`_.
+
+Non-Equilibrium Green's functions (NEGF)
+----------------------------
+
 The *retarded Green's function*
 
 .. math::
