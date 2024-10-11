@@ -16,13 +16,13 @@ Quickstart
    
    pip install fuNEGF
 
-then 
+and
 
 .. code-block:: python
    
    git clone https://github.com/liborsold/fuNEGF.git
    
-and execute the ``./examples/one-dimensional_channel.ipynb`` Jupyter notebook to see an example of calculating the NEGF transmission and chemical potential in the presence of impurities.
+to execute the ``./examples/one-dimensional_channel.ipynb`` Jupyter notebook and see an example of calculating the NEGF transmission and chemical potential in the presence of impurities.
 
 
 .. fuNEGF example image
@@ -37,9 +37,9 @@ and execute the ``./examples/one-dimensional_channel.ipynb`` Jupyter notebook to
    :width: 650px
    :align: center
 
-From the occupation it is clear that each impurity acts as a quantum resistor, causing a drop in the chemical potential. Without phase relaxation, however, it might be difficult to see. Momentum relaxation distributes the potential drop also into the clean wire region, causing a linear drop. 
+The impurities acts as quantum resistors, causing a drop in the chemical potential (occupation number). Without *phase relaxation* mechanisms, this might be difficult to see. Additionally, *momentum relaxation* mechanisms spread the chemical potential decrease into the clean wire region. 
 
-The transmission function is reduced due to strong localized impurities from the clean limit :math:`T(E) = 1.0 = \mathrm{const.}` to half of its value. With many weak and randomly distributed impurities, the transmission starts to resemble the clean limit again.
+Strong localized impurities reduce the transmission function from its clean limit :math:`T(E) = 1.0 = \mathrm{const.}` to half of this value. With weak, randomly distributed impurities, the transmission starts to resemble the clean limit again.
 
 Navigation
 ==========
