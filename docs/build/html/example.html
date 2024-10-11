@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Example &#8212; fuNEGF 0.1.11 documentation</title>
   
   
@@ -320,11 +321,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="section" id="example">
+  <section id="example">
 <h1>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h1>
 <p>An example of use is given in <code class="docutils literal notranslate"><span class="pre">./examples/one-dimensional_channel.ipynb</span></code>.</p>
 <p>There is also a time-complexity study in <code class="docutils literal notranslate"><span class="pre">./examples/time_complexity.ipynb</span></code>.</p>
-<div class="section" id="linear-chain-tight-binding-hamiltonian">
+<section id="linear-chain-tight-binding-hamiltonian">
 <h2>1. Linear-chain tight-binding Hamiltonian<a class="headerlink" href="#linear-chain-tight-binding-hamiltonian" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fuNEGF.models</span> <span class="kn">import</span> <span class="n">LinearChain</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -332,10 +333,10 @@ document.write(`
 <span class="n">chain</span> <span class="o">=</span> <span class="n">LinearChain</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">eps_0</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">H_impurity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot_dispersion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="_images/clean_wire.png"><img alt="_images/clean_wire.png" class="align-center" src="_images/clean_wire.png" style="width: 370px;" /></a>
+<a class="reference internal image-reference" href="_images/clean_wire.png"><img alt="_images/clean_wire.png" class="align-center" src="_images/clean_wire.png" style="width: 330px;" /></a>
 <a class="reference internal image-reference" href="_images/linear_chain_dispersion_analytic_vs_diagonalized.png"><img alt="_images/linear_chain_dispersion_analytic_vs_diagonalized.png" class="align-center" src="_images/linear_chain_dispersion_analytic_vs_diagonalized.png" style="width: 550px;" /></a>
-</div>
-<div class="section" id="impurity-potential">
+</section>
+<section id="impurity-potential">
 <h2>2. Impurity potential<a class="headerlink" href="#impurity-potential" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">H_impurity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
 
@@ -348,12 +349,12 @@ document.write(`
 </div>
 <a class="reference internal image-reference" href="_images/single_middle_shifted_more.png"><img alt="_images/single_middle_shifted_more.png" class="align-center" src="_images/single_middle_shifted_more.png" style="width: 450px;" /></a>
 <a class="reference internal image-reference" href="_images/impurity_single_middle.png"><img alt="_images/impurity_single_middle.png" class="align-center" src="_images/impurity_single_middle.png" style="width: 450px;" /></a>
-</div>
-<div class="section" id="chemical-potential-with-impurities">
+</section>
+<section id="chemical-potential-with-impurities">
 <h2>3. Chemical potential with impurities<a class="headerlink" href="#chemical-potential-with-impurities" title="Permalink to this heading">#</a></h2>
 <p>There is a <strong>potential drop</strong> at the impurities - the impurities act as <em>quantum resistors in series</em>.
 This can be demonstrated by calculating the occupation function profile.</p>
-<div class="section" id="no-relaxation">
+<section id="no-relaxation">
 <h3>3.1. No relaxation<a class="headerlink" href="#no-relaxation" title="Permalink to this heading">#</a></h3>
 <p>Without any relaxation mechanism, strong resonances arise, making the potential drop unclear.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># no relaxation</span>
@@ -364,8 +365,8 @@ This can be demonstrated by calculating the occupation function profile.</p>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/single_imp_middle_no_relaxation.png"><img alt="_images/single_imp_middle_no_relaxation.png" class="align-center" src="_images/single_imp_middle_no_relaxation.png" style="width: 380px;" /></a>
-</div>
-<div class="section" id="phase-relaxation">
+</section>
+<section id="phase-relaxation">
 <h3>3.2. Phase relaxation<a class="headerlink" href="#phase-relaxation" title="Permalink to this heading">#</a></h3>
 <p>Phase relaxation attenuates the Fabry-Pérot resonances.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># only phase</span>
@@ -376,8 +377,8 @@ This can be demonstrated by calculating the occupation function profile.</p>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/single_imp_middle_phase_relaxation.png"><img alt="_images/single_imp_middle_phase_relaxation.png" class="align-center" src="_images/single_imp_middle_phase_relaxation.png" style="width: 380px;" /></a>
-</div>
-<div class="section" id="phase-and-momentum-relaxation">
+</section>
+<section id="phase-and-momentum-relaxation">
 <h3>3.3. Phase and momentum relaxation<a class="headerlink" href="#phase-and-momentum-relaxation" title="Permalink to this heading">#</a></h3>
 <p>With an additional momentum relaxation, the potential drop is partially distributed over the whole channel length.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># phase and momentum</span>
@@ -388,14 +389,14 @@ This can be demonstrated by calculating the occupation function profile.</p>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/single_imp_middle_phase_and_momentum_relaxation.png"><img alt="_images/single_imp_middle_phase_and_momentum_relaxation.png" class="align-center" src="_images/single_imp_middle_phase_and_momentum_relaxation.png" style="width: 380px;" /></a>
-</div>
-</div>
-<div class="section" id="transmission-function">
+</section>
+</section>
+<section id="transmission-function">
 <h2>4. Transmission function<a class="headerlink" href="#transmission-function" title="Permalink to this heading">#</a></h2>
 <p>The transmission function reads</p>
 <div class="math notranslate nohighlight">
 \[\bar{T}(E)=\operatorname{Trace}\left[\boldsymbol{\Gamma}_1 \mathbf{G}^R \boldsymbol{\Gamma}_2 \mathbf{G}^A\right].\]</div>
-<div class="section" id="single-impurity">
+<section id="single-impurity">
 <h3>4.1. Single impurity<a class="headerlink" href="#single-impurity" title="Permalink to this heading">#</a></h3>
 <p>A single impurity in the center</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">H_impurity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
@@ -407,8 +408,8 @@ This can be demonstrated by calculating the occupation function profile.</p>
 </div>
 <p>reduces the transmission from the clean limit <span class="math notranslate nohighlight">\(T(E) = 1.0\)</span> to (at most) half of that value <span class="math notranslate nohighlight">\(T(E=0.0) = 0.5\)</span>:</p>
 <a class="reference internal image-reference" href="_images/transmission_single_imp_middle.png"><img alt="_images/transmission_single_imp_middle.png" class="align-center" src="_images/transmission_single_imp_middle.png" style="width: 250px;" /></a>
-</div>
-<div class="section" id="different-impurity-distributions">
+</section>
+<section id="different-impurity-distributions">
 <h3>4.2. Different impurity distributions<a class="headerlink" href="#different-impurity-distributions" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt>Let us now compare the transmission for several cases.</dt><dd><ol class="arabic simple">
@@ -444,10 +445,11 @@ This can be demonstrated by calculating the occupation function profile.</p>
 <span class="o">...</span>
 </pre></div>
 </div>
+<a class="reference internal image-reference" href="_images/multiple_imp_wire.png"><img alt="_images/multiple_imp_wire.png" class="align-right" src="_images/multiple_imp_wire.png" style="width: 200px;" /></a>
 <a class="reference internal image-reference" href="_images/example_fuNEGF.png"><img alt="_images/example_fuNEGF.png" class="align-center" src="_images/example_fuNEGF.png" style="width: 950px;" /></a>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
                 </article>

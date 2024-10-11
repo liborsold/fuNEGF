@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Theory &#8212; fuNEGF 0.1.11 documentation</title>
   
   
@@ -309,11 +310,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="section" id="theory">
+  <section id="theory">
 <h1>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h1>
 <p>Here, we summarize the physics used by the <code class="docutils literal notranslate"><span class="pre">fuNEGF</span></code> package in a nutshell. For a full account please refer to <a class="reference external" href="https://www.worldscientific.com/worldscibooks/10.1142/10440-vol2#t=aboutBook">Supriyo Datta - Lessons from Nanoelectronics — Part B: Quantum
 Transport (2018)</a>.</p>
-<div class="section" id="non-equilibrium-green-s-functions-negf">
+<section id="non-equilibrium-green-s-functions-negf">
 <h2>Non-Equilibrium Green’s functions (NEGF)<a class="headerlink" href="#non-equilibrium-green-s-functions-negf" title="Permalink to this heading">#</a></h2>
 <p>The <em>retarded Green’s function</em></p>
 <div class="math notranslate nohighlight">
@@ -345,8 +346,8 @@ Transport (2018)</a>.</p>
     \mathbf{G}^\mathrm{n} &amp;\equiv -i \mathbf{G}^&lt; , \\
     \mathbf{\Sigma}^\mathrm{in} &amp;\equiv -i \mathbf{\Sigma}^&lt; .
 \end{align}\end{split}\]</div>
-</div>
-<div class="section" id="linear-chain-model">
+</section>
+<section id="linear-chain-model">
 <h2>Linear Chain Model<a class="headerlink" href="#linear-chain-model" title="Permalink to this heading">#</a></h2>
 <p>For the <code class="docutils literal notranslate"><span class="pre">LinearChain</span></code> model, the <strong>Hamiltonian</strong></p>
 <div class="math notranslate nohighlight">
@@ -425,8 +426,8 @@ Transport (2018)</a>.</p>
         \mathbf{\Sigma}^\text{in}_0 &amp;= \mathbf{D} \odot \mathbf{G}^\text{n} .
 \end{align}\end{split}\]</div>
 <p>Since the Green’s functions enter the definition of the self-energy, a self-consistent loop is performed, where <span class="math notranslate nohighlight">\(\mathbf{G}^\text{R}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{G}^\text{n}\)</span> are initially set as zero matrices and iteratively updated, along with <span class="math notranslate nohighlight">\(\mathbf{\Sigma}_0\)</span> and <span class="math notranslate nohighlight">\(\mathbf{\Sigma}^\text{in}_0\)</span>. About 70 iteration steps are usually enough to reach a convergence.</p>
-</div>
-</div>
+</section>
+</section>
 
 
                 </article>

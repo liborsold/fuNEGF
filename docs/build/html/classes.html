@@ -7,7 +7,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Classes &#8212; fuNEGF 0.1.11 documentation</title>
   
   
@@ -316,7 +317,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="section" id="classes">
+  <section id="classes">
 <h1>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h1>
 <p>For now, there is the LinearChain class including both the model and NEGF solver routines. This will be in future separated into a generic System class, with child classes of different specific systems (like LinearChain).</p>
 <dl class="py class">
@@ -329,17 +330,17 @@ document.write(`
 <span class="sig-name descname"><span class="pre">G_R_fun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sigma_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.G_R_fun" title="Permalink to this definition">#</a></dt>
 <dd><p>The retarded Green’s function for a given k and energy E.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
 <li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
 <li><p><strong>Sigma_0</strong> (<em>N-by-N numpy array</em><em>, </em><em>optional</em>) – The internal self-energy. Defaults to None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the retarded Green’s function in matrix form.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>N-by-N numpy array</p>
 </dd>
 </dl>
@@ -353,7 +354,7 @@ document.write(`
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>k</strong> (<em>float</em>) – the Bloch wave vector.</p></li>
 <li><p><strong>E</strong> (<em>float</em>) – Energy in eV.</p></li>
@@ -362,14 +363,14 @@ document.write(`
 <li><p><strong>N_sc</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of self-consistent iteration steps: typically a value around 50 should be enough. Defaults to 70.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><dl class="simple">
 <dt>the self-consistently solved Green’s functions (retarded, advanced, electron occupation), the internal self-energy Sigma_0,</dt><dd><p>and the in-scattering self-energy Sigma_in_0.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>N-by-N numpy arrays</p>
 </dd>
 </dl>
@@ -380,7 +381,7 @@ document.write(`
 <span class="sig-name descname"><span class="pre">add_H_impurity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_impurity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dispersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.add_H_impurity" title="Permalink to this definition">#</a></dt>
 <dd><p>Add an impurity Hamiltonian.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>H_impurity</strong> (<em>N-by-N numpy array</em>) – The impurity Hamiltonian (typically an Anderson disorder).</p></li>
 <li><p><strong>plot_dispersion</strong> (<em>bool</em><em>, </em><em>optional</em>) – Plot the numerical and analytical dispersion. Defaults to False.</p></li>
@@ -400,7 +401,7 @@ document.write(`
 <span class="sig-name descname"><span class="pre">construct_H</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">make_H_periodic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_H_matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.construct_H" title="Permalink to this definition">#</a></dt>
 <dd><p>Construct the linear chain tight-binding Hamiltonian.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>make_H_periodic</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the Hamiltonian will be made periodic by adding t hopping to the [N-1, 0] and [0, N-1] sites. Defaults to False.</p></li>
 <li><p><strong>print_H_matrix</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, prints the Hamiltonian matrix. Defaults to False.</p></li>
@@ -418,7 +419,7 @@ device and q is the electron charge.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>D0_phase</strong> (<em>float</em>) – The phase relaxation parameter.</p></li>
 <li><p><strong>D0_phase_momentum</strong> (<em>float</em>) – The phase+momentum relaxation parameter.</p></li>
@@ -437,7 +438,7 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 <span class="sig-name descname"><span class="pre">plot_onsite_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_onsite_energy" title="Permalink to this definition">#</a></dt>
 <dd><p>Plot the on-site energy as horizontal lines.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
 </dd>
 </dl>
@@ -448,7 +449,7 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 <span class="sig-name descname"><span class="pre">plot_transmission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuNEGF.models.LinearChain.plot_transmission" title="Permalink to this definition">#</a></dt>
 <dd><p>Plots the transmission function T(E) given by T = Tr[Gamma_1 G_R Gamma_2 G_A].</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ax</strong> (<em>matplotlib.pyplot axis object</em><em>, </em><em>optional</em>) – If provided, the figure will be plotted to ax. Defaults to None.</p>
 </dd>
 </dl>
@@ -456,7 +457,7 @@ N_sc=1 effectively turns off the phase/momentum relaxation.</p></li>
 
 </dd></dl>
 
-</div>
+</section>
 
 
                 </article>

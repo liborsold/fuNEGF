@@ -18,7 +18,7 @@ There is also a time-complexity study in ``./examples/time_complexity.ipynb``.
 
 .. image::
    ./_images/clean_wire.png
-   :width: 370px
+   :width: 330px
    :align: center
 
 .. image::
@@ -181,6 +181,11 @@ Let us now compare the transmission for several cases.
       )
    ...
 
+.. fuNEGF example image
+.. image::
+   ./_images/multiple_imp_wire.png
+   :width: 200px
+   :align: right
 
 .. image::
    ./_images/example_fuNEGF.png

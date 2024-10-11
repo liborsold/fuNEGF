@@ -25,14 +25,14 @@ extensions = [
     'sphinx.ext.doctest', 
     'sphinx.ext.autodoc', 
     'sphinx.ext.autosummary', 
-    'sphinx.ext.napoleon', 
+    'sphinx.ext.napoleon',
+    'sphinx.ext.intersphinx',
     'sphinx_copybutton',
 ] 
 
 templates_path = ['_templates']
 html_static_path = ['_static']
 exclude_patterns = []
-
 
 
 # -- Options for HTML output -------------------------------------------------
