@@ -7,7 +7,7 @@
 Welcome to fuNEGF's documentation!
 ==================================
 
-The `fuNEGF project <https://github.com/liborsold/fuNEGF/>`_ is a Python package for the calculation of the electronic transport properties of nanostructures using the Non-Equilibrium Green's Function (NEGF) formalism for educational purposes. Limited to a 1D linear chain for now.
+The `fuNEGF project on GitHub <https://github.com/liborsold/fuNEGF/>`_ is a Python package for the calculation of the electronic transport properties of nanostructures using the Non-Equilibrium Green's Function (NEGF) formalism for educational purposes. Limited to a 1D linear chain for now.
 
 Quickstart
 ================
