@@ -9,13 +9,6 @@ Welcome to fuNEGF's documentation!
 
 The `fuNEGF project <https://github.com/liborsold/fuNEGF/>`_ is a Python package for the calculation of the electronic transport properties of nanostructures using the Non-Equilibrium Green's Function (NEGF) formalism for educational purposes. Limited to a 1D linear chain for now.
 
-.. fuNEGF example image
-.. image::
-   ./_images/example_fuNEGF.png
-   :width: 650px
-   :align: center
-
-
 Quickstart
 ================
 
@@ -31,6 +24,22 @@ then
    
 and execute the ``./examples/one-dimensional_channel.ipynb`` Jupyter notebook to see an example of calculating the NEGF transmission and chemical potential in the presence of impurities.
 
+
+.. fuNEGF example image
+.. image::
+   ./_images/multiple_imp_wire.png
+   :width: 310px
+   :align: right
+
+.. fuNEGF example image
+.. image::
+   ./_images/example_fuNEGF.png
+   :width: 650px
+   :align: center
+
+From the occupation it is clear that each impurity acts as a quantum resistor, causing a drop in the chemical potential. Without phase relaxation, however, it might be difficult to see. Momentum relaxation distributes the potential drop also into the clean wire region, causing a linear drop. 
+
+The transmission function is reduced due to strong localized impurities from the clean limit :math:`T(E) = 1.0 = \mathrm{const.}` to half of its value. With many weak and randomly distributed impurities, the transmission starts to resemble the clean limit again.
 
 Navigation
 ==========
