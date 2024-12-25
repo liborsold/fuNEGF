@@ -6,7 +6,7 @@ See the [documentation website](https://liborsold.github.io/fuNEGF/).
 pip install fuNEGF
 ```
 
-If you find this package useful, please cite **L. Vojáček. _Multiscale modeling of spin-orbitronic phenomena at metal, oxide, and 2D material interfaces for spintronic devices._ PhD thesis (2024).**
+If you find this package useful, please cite [**L. Vojáček, _Multiscale Modeling of Spin-Orbitronic Phenomena at Metal, Oxide, and 2D Material Interfaces for Spintronic Devices,_ PhD thesis , Université Grenoble Alpes (2024).**](https://theses.hal.science/tel-04836940)
 
 ## Package structure
 * the ```LinearChain``` class including the NEGF routines resides in ```src/fuNEGF/models.py```
